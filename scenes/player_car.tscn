@@ -6,7 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
 size = Vector2(114, 216)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir7uv"]
+size = Vector2(126, 228)
+
 [node name="PlayerCar" type="CharacterBody2D" unique_id=1441090914]
+z_index = 5
 motion_mode = 1
 script = ExtResource("1_ir7uv")
 
@@ -18,3 +22,12 @@ shape = SubResource("RectangleShape2D_yxcl1")
 position = Vector2(0, 17.199997)
 scale = Vector2(1, 1.8)
 texture = ExtResource("1_jmyin")
+
+[node name="RoadDetect" type="Area2D" parent="." unique_id=637950073]
+position = Vector2(0, 17.199997)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoadDetect" unique_id=1161981886]
+shape = SubResource("RectangleShape2D_ir7uv")
+
+[connection signal="area_entered" from="RoadDetect" to="." method="_on_road_detect_area_entered"]

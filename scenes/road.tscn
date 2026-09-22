@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cs4oond48riyv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
+size = Vector2(40, 40)
+
+[node name="Road" type="Area2D" unique_id=1164650044]
+z_index = -1
+scale = Vector2(2, 2)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641819002]
+scale = Vector2(15, 10)
+shape = SubResource("RectangleShape2D_yxcl1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=631690427]
+offset_right = 40.0
+offset_bottom = 40.0
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_scale = Vector2(15, 10)
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)

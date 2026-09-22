@@ -8,7 +8,16 @@ var accel = 0.0
 const bounce_multiplier = 0.9
 var current_rotation = 0.0
 
-@onready var bump_detect: Area2D = $BumpDetect
+@onready var road_detect: Area2D = $RoadDetect
+
+func _process(delta: float) -> void:
+	var overlapping = road_detect.get_overlapping_areas()
+	
+	for area in overlapping:
+		print(area.get_node("ColorRect"))
+		var rect = area.get_node("ColorRect")
+		var color = [Color.AQUA, Color.DARK_CYAN, Color.PALE_TURQUOISE]
+		rect.color = color.pick_random()
 
 func _physics_process(delta: float) -> void:
 	# Keep moving forward
