@@ -7,7 +7,7 @@
 size = Vector2(114, 216)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir7uv"]
-size = Vector2(126, 228)
+size = Vector2(126, 165.2)
 
 [node name="PlayerCar" type="CharacterBody2D" unique_id=1441090914]
 z_index = 5
@@ -28,6 +28,11 @@ position = Vector2(0, 17.199997)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoadDetect" unique_id=1161981886]
+position = Vector2(0, 31.400002)
 shape = SubResource("RectangleShape2D_ir7uv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoadDetect" unique_id=1263345018]
+position = Vector2(0, 0.80000305)
+polygon = PackedVector2Array(64, -53.199997, -63, -52.199997, 0, -114.2)
 
 [connection signal="area_entered" from="RoadDetect" to="." method="_on_road_detect_area_entered"]

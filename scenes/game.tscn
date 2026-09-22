@@ -15,72 +15,191 @@ zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.5
 
-[node name="Wall" parent="." unique_id=306052144 instance=ExtResource("2_yqjtg")]
-position = Vector2(-109.00001, 241.00002)
-rotation = -1.0630951
-scale = Vector2(6.08, 2)
+[node name="Track4" type="Node2D" parent="." unique_id=1258069772]
 
-[node name="Wall6" parent="." unique_id=875211935 instance=ExtResource("2_yqjtg")]
-position = Vector2(835, 578)
-rotation = -1.0630951
-scale = Vector2(6.08, 2)
-
-[node name="Wall7" parent="." unique_id=1903468016 instance=ExtResource("2_yqjtg")]
-position = Vector2(1256.9999, -69.99998)
-rotation = -0.8518983
-scale = Vector2(3.5927854, 2)
-
-[node name="Wall2" parent="." unique_id=2023102927 instance=ExtResource("2_yqjtg")]
-position = Vector2(416.00003, -590.00006)
-rotation = -0.95103747
-scale = Vector2(6.08, 2)
-
-[node name="Wall3" parent="." unique_id=1590885953 instance=ExtResource("2_yqjtg")]
+[node name="Wall3" parent="Track4" unique_id=1590885953 instance=ExtResource("2_yqjtg")]
 position = Vector2(1045.0001, -1186)
 rotation = -0.5013943
 scale = Vector2(4.6617403, 2)
 
-[node name="Wall5" parent="." unique_id=866409278 instance=ExtResource("2_yqjtg")]
+[node name="Wall5" parent="Track4" unique_id=866409278 instance=ExtResource("2_yqjtg")]
 position = Vector2(2110, -1145)
-rotation = 0.4358213
+rotation = 0.43582126
 scale = Vector2(4.6617403, 2)
 
-[node name="Wall4" parent="." unique_id=2081865786 instance=ExtResource("2_yqjtg")]
+[node name="Wall4" parent="Track4" unique_id=2081865786 instance=ExtResource("2_yqjtg")]
 position = Vector2(1569.0001, -1337.0001)
 rotation = 0.18788236
 scale = Vector2(2.4592185, 2)
 
-[node name="Wall8" parent="." unique_id=1232931465 instance=ExtResource("2_yqjtg")]
-position = Vector2(1550, -276.00003)
-rotation = 0.052721053
-scale = Vector2(1.4060155, 2)
-
-[node name="Wall9" parent="." unique_id=908388653 instance=ExtResource("2_yqjtg")]
-position = Vector2(1827, -178.00003)
-rotation = 0.5192046
-scale = Vector2(2.4592185, 2)
-
-[node name="Road" parent="." unique_id=1164650044 instance=ExtResource("3_lnu2h")]
+[node name="Road" parent="Track4" unique_id=1164650044 instance=ExtResource("3_lnu2h")]
 position = Vector2(379, 371)
 rotation = -1.069419
 scale = Vector2(2.0989642, 2.4645946)
 
-[node name="Road2" parent="." unique_id=557121094 instance=ExtResource("3_lnu2h")]
+[node name="Road2" parent="Track4" unique_id=557121094 instance=ExtResource("3_lnu2h")]
 position = Vector2(909, -438)
-rotation = -0.91260415
+rotation = -0.9126042
 scale = Vector2(1.3585796, 2.4645946)
 
-[node name="Road5" parent="." unique_id=38376137 instance=ExtResource("3_lnu2h")]
+[node name="Road5" parent="Track4" unique_id=38376137 instance=ExtResource("3_lnu2h")]
 position = Vector2(1823, -733.00006)
 rotation = 0.50401443
 scale = Vector2(1.3585796, 2.4645946)
 
-[node name="Road4" parent="." unique_id=35464441 instance=ExtResource("3_lnu2h")]
+[node name="Road4" parent="Track4" unique_id=35464441 instance=ExtResource("3_lnu2h")]
 position = Vector2(1217.0001, -701.00006)
 rotation = -0.3587393
-scale = Vector2(0.9011767, 2.505838)
+scale = Vector2(0.90117675, 2.505838)
 
-[node name="Road3" parent="." unique_id=306851889 instance=ExtResource("3_lnu2h")]
+[node name="Road3" parent="Track4" unique_id=306851889 instance=ExtResource("3_lnu2h")]
 position = Vector2(1479.0001, -821.00006)
+rotation = -0.03255336
+scale = Vector2(0.6259967, 2.6683953)
+
+[node name="Track1" type="Node2D" parent="." unique_id=898331847]
+position = Vector2(3232, 287.99997)
+rotation = 1.668284
+
+[node name="Wall11" parent="Track1" unique_id=1806614213 instance=ExtResource("2_yqjtg")]
+position = Vector2(-53, 907.0001)
+rotation = -1.0630951
+scale = Vector2(6.08, 2)
+
+[node name="Wall14" parent="Track1" unique_id=226553211 instance=ExtResource("2_yqjtg")]
+position = Vector2(157.00024, -856.9999)
+rotation = -0.5013943
+scale = Vector2(4.6617403, 2)
+
+[node name="Wall16" parent="Track1" unique_id=761195059 instance=ExtResource("2_yqjtg")]
+position = Vector2(681.00024, -1008)
+rotation = 0.18788236
+scale = Vector2(2.4592185, 2)
+
+[node name="Road6" parent="Track1" unique_id=2094416489 instance=ExtResource("3_lnu2h")]
+position = Vector2(-508.99976, 700.0002)
+rotation = -1.069419
+scale = Vector2(2.0989642, 2.4645946)
+
+[node name="Road7" parent="Track1" unique_id=965018195 instance=ExtResource("3_lnu2h")]
+position = Vector2(21, -108.99988)
+rotation = -0.9126042
+scale = Vector2(1.3585796, 2.4645946)
+
+[node name="Road8" parent="Track1" unique_id=1248450790 instance=ExtResource("3_lnu2h")]
+position = Vector2(934.99976, -403.99994)
+rotation = 0.50401443
+scale = Vector2(1.3585796, 2.4645946)
+
+[node name="Road9" parent="Track1" unique_id=1104581283 instance=ExtResource("3_lnu2h")]
+position = Vector2(329.00024, -372)
+rotation = -0.3587393
+scale = Vector2(0.90117675, 2.505838)
+
+[node name="Road10" parent="Track1" unique_id=635572161 instance=ExtResource("3_lnu2h")]
+position = Vector2(591.00024, -491.99997)
+rotation = -0.03255336
+scale = Vector2(0.6259967, 2.6683953)
+
+[node name="Track2" type="Node2D" parent="." unique_id=1484826344]
+position = Vector2(2454, 2694)
+rotation = 3.2376273
+
+[node name="Wall11" parent="Track2" unique_id=1720500989 instance=ExtResource("2_yqjtg")]
+position = Vector2(-53, 907.0001)
+rotation = -1.0630951
+scale = Vector2(6.08, 2)
+
+[node name="Wall13" parent="Track2" unique_id=627450762 instance=ExtResource("2_yqjtg")]
+position = Vector2(-472.00012, -260.99994)
+rotation = -0.9510375
+scale = Vector2(6.08, 2)
+
+[node name="Wall14" parent="Track2" unique_id=77539880 instance=ExtResource("2_yqjtg")]
+position = Vector2(157.00024, -856.9999)
+rotation = -0.5013943
+scale = Vector2(4.6617403, 2)
+
+[node name="Wall15" parent="Track2" unique_id=1853179836 instance=ExtResource("2_yqjtg")]
+position = Vector2(1222, -815.9999)
+rotation = 0.43582126
+scale = Vector2(4.6617403, 2)
+
+[node name="Wall16" parent="Track2" unique_id=1411336250 instance=ExtResource("2_yqjtg")]
+position = Vector2(681.00024, -1008)
+rotation = 0.18788236
+scale = Vector2(2.4592185, 2)
+
+[node name="Road6" parent="Track2" unique_id=620470316 instance=ExtResource("3_lnu2h")]
+position = Vector2(-508.99976, 700.0002)
+rotation = -1.069419
+scale = Vector2(2.0989642, 2.4645946)
+
+[node name="Road7" parent="Track2" unique_id=333530244 instance=ExtResource("3_lnu2h")]
+position = Vector2(21, -108.99988)
+rotation = -0.9126042
+scale = Vector2(1.3585796, 2.4645946)
+
+[node name="Road8" parent="Track2" unique_id=183610857 instance=ExtResource("3_lnu2h")]
+position = Vector2(934.99976, -403.99994)
+rotation = 0.50401443
+scale = Vector2(1.3585796, 2.4645946)
+
+[node name="Road9" parent="Track2" unique_id=1758700379 instance=ExtResource("3_lnu2h")]
+position = Vector2(329.00024, -372)
+rotation = -0.3587393
+scale = Vector2(0.90117675, 2.505838)
+
+[node name="Road10" parent="Track2" unique_id=1645098431 instance=ExtResource("3_lnu2h")]
+position = Vector2(591.00024, -491.99997)
+rotation = -0.03255336
+scale = Vector2(0.6259967, 2.6683953)
+
+[node name="Track3" type="Node2D" parent="." unique_id=850507630]
+position = Vector2(276, 2120)
+rotation = 4.776242
+
+[node name="Wall11" parent="Track3" unique_id=816203274 instance=ExtResource("2_yqjtg")]
+position = Vector2(-53, 907.0001)
+rotation = -1.0630951
+scale = Vector2(6.08, 2)
+
+[node name="Wall12" parent="Track3" unique_id=1358397841 instance=ExtResource("2_yqjtg")]
+position = Vector2(369, 259.00012)
+rotation = -0.85189825
+scale = Vector2(3.5927854, 2)
+
+[node name="Wall14" parent="Track3" unique_id=849300646 instance=ExtResource("2_yqjtg")]
+position = Vector2(157.00024, -856.9999)
+rotation = -0.5013943
+scale = Vector2(4.6617403, 2)
+
+[node name="Wall16" parent="Track3" unique_id=423915753 instance=ExtResource("2_yqjtg")]
+position = Vector2(681.00024, -1008)
+rotation = 0.18788236
+scale = Vector2(2.4592185, 2)
+
+[node name="Road6" parent="Track3" unique_id=2076958188 instance=ExtResource("3_lnu2h")]
+position = Vector2(-508.99976, 700.0002)
+rotation = -1.069419
+scale = Vector2(2.0989642, 2.4645946)
+
+[node name="Road7" parent="Track3" unique_id=335414309 instance=ExtResource("3_lnu2h")]
+position = Vector2(21, -108.99988)
+rotation = -0.9126042
+scale = Vector2(1.3585796, 2.4645946)
+
+[node name="Road8" parent="Track3" unique_id=357015270 instance=ExtResource("3_lnu2h")]
+position = Vector2(934.99976, -403.99994)
+rotation = 0.50401443
+scale = Vector2(1.3585796, 2.4645946)
+
+[node name="Road9" parent="Track3" unique_id=1237985866 instance=ExtResource("3_lnu2h")]
+position = Vector2(329.00024, -372)
+rotation = -0.3587393
+scale = Vector2(0.90117675, 2.505838)
+
+[node name="Road10" parent="Track3" unique_id=686159501 instance=ExtResource("3_lnu2h")]
+position = Vector2(591.00024, -491.99997)
 rotation = -0.03255336
 scale = Vector2(0.6259967, 2.6683953)
