@@ -14,7 +14,7 @@ script = ExtResource("1_yyywg")
 scale = Vector2(2, 15)
 shape = SubResource("RectangleShape2D_yxcl1")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=686161485]
+[node name="Areadetect" type="ColorRect" parent="." unique_id=686161485 groups=["checkpoint"]]
 offset_right = 40.0
 offset_bottom = 40.0
 offset_transform_enabled = true
@@ -22,5 +22,23 @@ offset_transform_position_ratio = Vector2(-0.5, -0.5)
 offset_transform_scale = Vector2(1, 7.5)
 color = Color(0.81, 0, 0, 0.157)
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1037162888]
+offset_top = -155.5
+offset_right = 40.0
+offset_bottom = -115.5
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_scale = Vector2(1, 0.25)
+color = Color(0.5776609, 0.6866234, 0.63312316, 0.6862745)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=689320]
+offset_top = 155.0
+offset_right = 40.0
+offset_bottom = 195.0
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_scale = Vector2(1, 0.25)
+color = Color(0.5776609, 0.6866234, 0.63312316, 0.6862745)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

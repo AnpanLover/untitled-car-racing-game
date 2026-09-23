@@ -8,7 +8,7 @@ const color = {
 	"check": Color(0.0, 0.812, 0.231, 0.157)
 	}
 
-@onready var color_rect: ColorRect = $ColorRect
+@onready var color_rect: ColorRect = $Areadetect
 
 func _process(delta: float) -> void:
 	time_elapsed += delta

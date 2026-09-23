@@ -16,6 +16,26 @@ zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.5
 
+[node name="Checkpoint" parent="." unique_id=1259974385 instance=ExtResource("4_lbhrr")]
+position = Vector2(1078, -584)
+rotation = -0.9701762
+scale = Vector2(3.147604, 3.511123)
+
+[node name="Checkpoint2" parent="." unique_id=848603671 instance=ExtResource("4_lbhrr")]
+position = Vector2(2951, -0.99993896)
+rotation = 0.6972188
+scale = Vector2(3.147604, 3.511123)
+
+[node name="Checkpoint3" parent="." unique_id=1601840574 instance=ExtResource("4_lbhrr")]
+position = Vector2(2723, 2491.0002)
+rotation = 2.2325459
+scale = Vector2(3.147604, 3.511123)
+
+[node name="Checkpoint4" parent="." unique_id=1170993043 instance=ExtResource("4_lbhrr")]
+position = Vector2(441, 2341)
+rotation = 3.8518348
+scale = Vector2(3.147604, 3.511123)
+
 [node name="Track4" type="Node2D" parent="." unique_id=1258069772]
 
 [node name="Wall3" parent="Track4" unique_id=1590885953 instance=ExtResource("2_yqjtg")]
@@ -204,8 +224,3 @@ scale = Vector2(0.90117675, 2.505838)
 position = Vector2(591.00024, -491.99997)
 rotation = -0.03255336
 scale = Vector2(0.6259967, 2.6683953)
-
-[node name="Checkpoint" parent="." unique_id=1259974385 instance=ExtResource("4_lbhrr")]
-position = Vector2(1078, -584)
-rotation = -0.9701762
-scale = Vector2(3.147604, 3.511123)
