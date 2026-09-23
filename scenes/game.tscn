@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bgrvk881kbhvj" path="res://scenes/player_car.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cs4oond48riyv" path="res://scenes/road.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
 
 [node name="Main" type="Node2D" unique_id=2090959149]
 
@@ -203,3 +204,8 @@ scale = Vector2(0.90117675, 2.505838)
 position = Vector2(591.00024, -491.99997)
 rotation = -0.03255336
 scale = Vector2(0.6259967, 2.6683953)
+
+[node name="Checkpoint" parent="." unique_id=1259974385 instance=ExtResource("4_lbhrr")]
+position = Vector2(1078, -584)
+rotation = -0.9701762
+scale = Vector2(3.147604, 3.511123)

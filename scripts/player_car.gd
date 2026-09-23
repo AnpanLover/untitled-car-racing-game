@@ -9,11 +9,11 @@ const bounce_multiplier = 0.9
 var current_rotation = 0.0
 var is_on_road = false
 
-@onready var road_detect: Area2D = $RoadDetect
+@onready var area_detect: Area2D = $Area2D
 
 func _process(delta: float) -> void:
 	# Detect if on road or not
-	var overlapping = road_detect.get_overlapping_areas()
+	var overlapping = area_detect.get_overlapping_areas()
 	is_on_road = true if overlapping else false
 
 func _physics_process(delta: float) -> void:
@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	if velocity.length() < max_speed: # cap speed accelerator
 		velocity += forward_direction * speed
 		
-	var friction = 0.97 if is_on_road else 0.93
+	var friction = 0.97 if is_on_road else 0.94
 	velocity *= friction # keep reduce velocity
 	
 	# Get direction (-1 = left, 1 = right)

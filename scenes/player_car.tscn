@@ -23,16 +23,16 @@ position = Vector2(0, 17.199997)
 scale = Vector2(1, 1.8)
 texture = ExtResource("1_jmyin")
 
-[node name="RoadDetect" type="Area2D" parent="." unique_id=637950073]
+[node name="Area2D" type="Area2D" parent="." unique_id=637950073]
 position = Vector2(0, 17.199997)
-collision_mask = 2
+collision_mask = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RoadDetect" unique_id=1161981886]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1161981886]
 position = Vector2(0, 31.400002)
 shape = SubResource("RectangleShape2D_ir7uv")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoadDetect" unique_id=1263345018]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1263345018]
 position = Vector2(0, 0.80000305)
 polygon = PackedVector2Array(64, -53.199997, -63, -52.199997, 0, -114.2)
 
-[connection signal="area_entered" from="RoadDetect" to="." method="_on_road_detect_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_road_detect_area_entered"]
