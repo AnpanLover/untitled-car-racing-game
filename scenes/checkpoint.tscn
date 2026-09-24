@@ -10,6 +10,7 @@ scale = Vector2(2, 2)
 collision_layer = 4
 script = ExtResource("1_yyywg")
 metadata/stage = 0
+metadata/queue = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561928022]
 scale = Vector2(2, 15)

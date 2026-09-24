@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://ehjxrbuol6si"]
 
+[ext_resource type="Script" uid="uid://cveeixoea2l20" path="res://scripts/checkpoint_manager.gd" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://bgrvk881kbhvj" path="res://scenes/player_car.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cs4oond48riyv" path="res://scenes/road.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
 
 [node name="Main" type="Node2D" unique_id=2090959149]
+
+[node name="CheckpointManager" type="Node" parent="." unique_id=28470713]
+unique_name_in_owner = true
+script = ExtResource("1_iywne")
 
 [node name="PlayerCar" parent="." unique_id=1441090914 instance=ExtResource("1_uwrxv")]
 position = Vector2(591, 323)
@@ -25,16 +30,19 @@ scale = Vector2(3.147604, 3.511123)
 position = Vector2(2951, -0.99993896)
 rotation = 0.6972188
 scale = Vector2(3.147604, 3.511123)
+metadata/queue = 1
 
 [node name="Checkpoint3" parent="." unique_id=1601840574 instance=ExtResource("4_lbhrr")]
 position = Vector2(2723, 2491.0002)
 rotation = 2.2325459
 scale = Vector2(3.147604, 3.511123)
+metadata/queue = 2
 
 [node name="Checkpoint4" parent="." unique_id=1170993043 instance=ExtResource("4_lbhrr")]
 position = Vector2(441, 2341)
 rotation = 3.8518348
 scale = Vector2(3.147604, 3.511123)
+metadata/queue = 3
 
 [node name="Track4" type="Node2D" parent="." unique_id=1258069772]
 
