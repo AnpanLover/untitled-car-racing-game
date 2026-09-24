@@ -4,7 +4,7 @@
 size = Vector2(40, 40)
 
 [node name="Road" type="Area2D" unique_id=1164650044]
-z_index = -1
+z_index = -2
 scale = Vector2(2, 2)
 collision_layer = 2
 

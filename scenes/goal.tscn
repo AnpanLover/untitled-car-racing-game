@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bunpici8048e8"]
+
+[ext_resource type="Script" uid="uid://cgfck0re5rs0n" path="res://scripts/goal.gd" id="1_jbojv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
+
+[node name="Goal" type="Area2D" unique_id=1259974385]
+z_index = -1
+scale = Vector2(2, 2)
+collision_layer = 4
+script = ExtResource("1_jbojv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561928022]
+scale = Vector2(2, 15)
+shape = SubResource("RectangleShape2D_yxcl1")
+
+[node name="Areadetect" type="ColorRect" parent="." unique_id=686161485]
+offset_right = 40.0
+offset_bottom = 40.0
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_scale = Vector2(1, 7.5)
+color = Color(0.7581918, 0.7581918, 0.7581917, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -9,10 +9,11 @@ size = Vector2(114, 216)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir7uv"]
 size = Vector2(126, 165.2)
 
-[node name="PlayerCar" type="CharacterBody2D" unique_id=1441090914]
+[node name="PlayerCar" type="CharacterBody2D" unique_id=1441090914 groups=["car"]]
 z_index = 5
 motion_mode = 1
 script = ExtResource("1_ir7uv")
+metadata/lap = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=796002714]
 position = Vector2(0, 17.199997)
