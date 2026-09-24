@@ -4,17 +4,18 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
 
-[node name="Checkpoint" type="Area2D" unique_id=1259974385]
+[node name="Checkpoint" type="Area2D" unique_id=1259974385 groups=["checkpoint"]]
 z_index = 6
 scale = Vector2(2, 2)
 collision_layer = 4
 script = ExtResource("1_yyywg")
+metadata/stage = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561928022]
 scale = Vector2(2, 15)
 shape = SubResource("RectangleShape2D_yxcl1")
 
-[node name="Areadetect" type="ColorRect" parent="." unique_id=686161485 groups=["checkpoint"]]
+[node name="Areadetect" type="ColorRect" parent="." unique_id=686161485]
 offset_right = 40.0
 offset_bottom = 40.0
 offset_transform_enabled = true

@@ -40,6 +40,6 @@ func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.get_normal()) * bounce_multiplier
-		current_rotation -= velocity.angle() * 0.35
+		current_rotation -= velocity.angle() * 0.2
 	
 	rotation = lerp_angle(rotation, current_rotation, 0.2)
