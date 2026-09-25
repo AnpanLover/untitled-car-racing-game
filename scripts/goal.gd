@@ -12,7 +12,6 @@ func _on_area_entered(area: Area2D) -> void:
 	var winner_count = get_tree().get_nodes_in_group("winner").size()
 	var winner_is_presented = false if winner_count == 0 else true
 	if current_lap == lap_count and winner_is_presented == false:
-		print("You win")
 		car.add_to_group("winner")
 		
 	

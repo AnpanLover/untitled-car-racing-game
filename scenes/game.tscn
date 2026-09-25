@@ -34,7 +34,7 @@ position_smoothing_speed = 7.5
 unique_name_in_owner = true
 position = Vector2(461, 223.99998)
 rotation = -1.0070381
-scale = Vector2(3.7746527, 3.2649813)
+scale = Vector2(3, 3.265)
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=135569286]
 
