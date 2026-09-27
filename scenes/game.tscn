@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ehjxrbuol6si"]
 
-[ext_resource type="Script" uid="uid://cveeixoea2l20" path="res://scripts/checkpoint_manager.gd" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://bgrvk881kbhvj" path="res://scenes/player_car.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://d0ivgrqxpdlyx" path="res://scripts/game_manager.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="2_yqjtg"]
@@ -11,13 +10,7 @@
 
 [node name="Main" type="Node2D" unique_id=2090959149]
 
-[node name="Managers" type="Node" parent="." unique_id=2139112571]
-
-[node name="CheckpointManager" type="Node" parent="Managers" unique_id=28470713]
-unique_name_in_owner = true
-script = ExtResource("1_iywne")
-
-[node name="GameManager" type="Node" parent="Managers" unique_id=1904859772]
+[node name="GameManager" type="Node" parent="." unique_id=1904859772]
 unique_name_in_owner = true
 script = ExtResource("2_u5sy4")
 
