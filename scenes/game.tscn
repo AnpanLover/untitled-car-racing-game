@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://ehjxrbuol6si"]
 
-[ext_resource type="Script" uid="uid://cveeixoea2l20" path="res://scripts/checkpoint_manager.gd" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://bgrvk881kbhvj" path="res://scenes/player_car.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://d0ivgrqxpdlyx" path="res://scripts/game_manager.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cs4oond48riyv" path="res://scenes/road.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bunpici8048e8" path="res://scenes/goal.tscn" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dxl6tpqiap2l8" path="res://scenes/win_lose_ui.tscn" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
 
 [node name="Main" type="Node2D" unique_id=2090959149]
 
-[node name="CheckpointManager" type="Node" parent="." unique_id=28470713]
+[node name="GameManager" type="Node" parent="." unique_id=1904859772]
 unique_name_in_owner = true
-script = ExtResource("1_iywne")
+script = ExtResource("2_u5sy4")
+
+[node name="StopGame" type="Timer" parent="GameManager" unique_id=75946600]
+wait_time = 3.0
+one_shot = true
+ignore_time_scale = true
 
 [node name="PlayerCar" parent="." unique_id=1441090914 instance=ExtResource("1_uwrxv")]
-position = Vector2(591, 323)
+position = Vector2(354, 355)
+rotation = 0.68025887
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCar" unique_id=228830742]
 position = Vector2(0, -143)
@@ -21,26 +29,34 @@ zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.5
 
-[node name="Checkpoint" parent="." unique_id=1259974385 instance=ExtResource("4_lbhrr")]
+[node name="Goal" parent="." unique_id=1259974385 instance=ExtResource("3_p57ef")]
+unique_name_in_owner = true
+position = Vector2(461, 223.99998)
+rotation = -1.0070381
+scale = Vector2(3, 3.265)
+
+[node name="Checkpoints" type="Node2D" parent="." unique_id=135569286]
+
+[node name="Checkpoint" parent="Checkpoints" unique_id=816258287 instance=ExtResource("4_lbhrr")]
 position = Vector2(1078, -584)
 rotation = -0.9701762
 scale = Vector2(3.147604, 3.511123)
 
-[node name="Checkpoint2" parent="." unique_id=848603671 instance=ExtResource("4_lbhrr")]
+[node name="Checkpoint2" parent="Checkpoints" unique_id=848603671 instance=ExtResource("4_lbhrr")]
 position = Vector2(2951, -0.99993896)
 rotation = 0.6972188
 scale = Vector2(3.147604, 3.511123)
 metadata/queue = 1
 
-[node name="Checkpoint3" parent="." unique_id=1601840574 instance=ExtResource("4_lbhrr")]
+[node name="Checkpoint3" parent="Checkpoints" unique_id=1601840574 instance=ExtResource("4_lbhrr")]
 position = Vector2(2723, 2491.0002)
 rotation = 2.2325459
 scale = Vector2(3.147604, 3.511123)
 metadata/queue = 2
 
-[node name="Checkpoint4" parent="." unique_id=1170993043 instance=ExtResource("4_lbhrr")]
+[node name="Checkpoint4" parent="Checkpoints" unique_id=1170993043 instance=ExtResource("4_lbhrr")]
 position = Vector2(441, 2341)
-rotation = 3.8518348
+rotation = -2.4313507
 scale = Vector2(3.147604, 3.511123)
 metadata/queue = 3
 
@@ -232,3 +248,9 @@ scale = Vector2(0.90117675, 2.505838)
 position = Vector2(591.00024, -491.99997)
 rotation = -0.03255336
 scale = Vector2(0.6259967, 2.6683953)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1398748121]
+
+[node name="WinLoseUI" parent="CanvasLayer" unique_id=687290800 instance=ExtResource("4_gee14")]
+
+[connection signal="timeout" from="GameManager/StopGame" to="GameManager" method="_on_stop_game_timeout"]

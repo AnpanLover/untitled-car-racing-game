@@ -12,13 +12,13 @@ const color = {
 var stage: int
 
 @onready var areadetect: ColorRect = $Areadetect
-@onready var checkpoint_manager: Node = %CheckpointManager
+@onready var manager: Node = %GameManager
 
 func _process(delta: float) -> void:
 	time_elapsed += delta
 	
 	# check if it my lap
-	var current_lap = checkpoint_manager.current_lap
+	var current_lap = manager.current_lap
 	if current_lap == get_meta("queue"):
 		stage_change(1) # to Next stage
 	
@@ -28,11 +28,13 @@ func stage_change(num: int):
 	set_meta("stage", num)
 
 func _on_area_entered(area: Area2D) -> void:
-	var current_lap = checkpoint_manager.current_lap
+	var car = area.owner
+	var current_lap = manager.current_lap
 	if current_lap == get_meta("queue"):
 		stage_change(2) # to Completed stage
 		flicker_pop = 0.8 # POP effect
-		checkpoint_manager.passed() # add 1 to current_lap
+		manager.lap_passed() # add 1 to current_lap
+		car.set_meta("lap", manager.current_lap) # set metadata "lap" to current lap
 	
 func stage_checker():
 	# change color based on metadata "stage"

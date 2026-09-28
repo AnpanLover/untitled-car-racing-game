@@ -6,8 +6,8 @@ var max_speed = 2000.0
 const steering_speed = 5.0
 var accel = 0.0
 const bounce_multiplier = 0.9
-var current_rotation = 0.0
 var is_on_road = false
+@onready var current_rotation = rotation
 
 @onready var area_detect: Area2D = $Area2D
 
@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	# Detect if on road or not
 	var overlapping = area_detect.get_overlapping_areas()
 	is_on_road = true if overlapping else false
-
+	
 func _physics_process(delta: float) -> void:
 	# Keep moving forward
 	var forward_direction = Vector2.UP.rotated(current_rotation)
@@ -43,3 +43,7 @@ func _physics_process(delta: float) -> void:
 		current_rotation -= velocity.angle() * 0.2
 	
 	rotation = lerp_angle(rotation, current_rotation, 0.2)
+
+func lap_passed(lap_count: int):
+	set_meta("lap", lap_count)
+	
