@@ -14,6 +14,11 @@
 unique_name_in_owner = true
 script = ExtResource("2_u5sy4")
 
+[node name="StopGame" type="Timer" parent="GameManager" unique_id=75946600]
+wait_time = 3.0
+one_shot = true
+ignore_time_scale = true
+
 [node name="PlayerCar" parent="." unique_id=1441090914 instance=ExtResource("1_uwrxv")]
 position = Vector2(354, 355)
 rotation = 0.68025887
@@ -247,3 +252,5 @@ scale = Vector2(0.6259967, 2.6683953)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1398748121]
 
 [node name="WinLoseUI" parent="CanvasLayer" unique_id=687290800 instance=ExtResource("4_gee14")]
+
+[connection signal="timeout" from="GameManager/StopGame" to="GameManager" method="_on_stop_game_timeout"]
