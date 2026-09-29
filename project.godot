@@ -55,4 +55,4 @@ Restart={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.12843424, 0.30221322, 0.21595961, 1)
+environment/defaults/default_clear_color=Color(0.12941177, 0.3019608, 0.21568628, 1)
