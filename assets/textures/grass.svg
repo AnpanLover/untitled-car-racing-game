@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="128"
-   height="32"
-   viewBox="0 0 128 32"
+   width="2048"
+   height="512"
+   viewBox="0 0 2048 512"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -14,20 +14,20 @@
   <g
      id="layer1">
     <path
-       d="m 7.1152344,11.556641 v 8.425781 0.458984 0.002 3.982422 H 24.884766 V 20.441406 19.982422 11.556641 L 20.441406,16 16,11.558594 11.558594,16 Z"
-       style="fill:#2e6c4e;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 113.84375,184.90626 v 134.81249 7.34375 0.032 63.71875 H 398.15626 V 327.0625 319.71875 184.90626 L 327.0625,256 256,184.9375 184.9375,256 Z"
+       style="fill:#2e6c4e;fill-opacity:1;stroke:none;stroke-width:16;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
        id="path36" />
     <path
-       d="m 39.115234,15.541016 v 8.884765 H 48 56.884766 V 15.541016 L 52.441406,19.984375 48,15.541016 43.558594,19.984375 Z"
-       style="fill:#2e6c4e;fill-opacity:1;stroke-width:9.64455;stroke-linecap:round"
+       d="M 625.84374,248.65626 V 390.8125 H 768 910.15626 V 248.65626 L 839.0625,319.75 768,248.65626 696.9375,319.75 Z"
+       style="fill:#2e6c4e;fill-opacity:1;stroke-width:154.313;stroke-linecap:round"
        id="path37" />
     <path
-       d="m 80,15.541016 -8.884766,8.884765 H 80 88.884766 Z"
-       style="fill:#2e6c4e;fill-opacity:1;stroke-width:9.64455;stroke-linecap:round"
+       d="M 1280,248.65626 1137.8437,390.8125 H 1280 1422.1563 Z"
+       style="fill:#2e6c4e;fill-opacity:1;stroke-width:154.313;stroke-linecap:round"
        id="path38" />
     <path
-       d="m 105.56399,11.556594 v 12.869187 h 12.87202 V 11.556594 L 112,17.992602 Z"
-       style="fill:#2e6c4e;fill-opacity:1;stroke-width:13.9697;stroke-linecap:round"
+       d="m 1689.0238,184.9055 v 205.907 h 205.9524 V 184.9055 L 1792,287.88163 Z"
+       style="fill:#2e6c4e;fill-opacity:1;stroke-width:223.515;stroke-linecap:round"
        id="path39" />
   </g>
 </svg>

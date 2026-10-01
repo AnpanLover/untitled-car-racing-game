@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cwfsxh15hkkt6"]
+
+[ext_resource type="Script" uid="uid://dxhmol1x65ysw" path="res://scripts/obstacle.gd" id="1_drdry"]
+[ext_resource type="Texture2D" uid="uid://bte6o0paj145o" path="res://assets/textures/wheels.svg" id="1_r4ftp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p57ef"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_elgho"]
+radius = 118.258194
+
+[node name="Obstacle" type="RigidBody2D" unique_id=1037469282]
+z_index = 1
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_p57ef")
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 2.0
+script = ExtResource("1_drdry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022504257]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_elgho")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=595733879]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_r4ftp")
+hframes = 3

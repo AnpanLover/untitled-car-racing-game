@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bgrvk881kbhvj"]
 
 [ext_resource type="Script" uid="uid://d4kk8e6ljxgxe" path="res://scripts/player_car.gd" id="1_ir7uv"]
-[ext_resource type="Texture2D" uid="uid://fh4rbi3t6u63" path="res://icon.svg" id="1_jmyin"]
+[ext_resource type="Texture2D" uid="uid://bwsusvvtfhu2q" path="res://assets/textures/racing_car.svg" id="2_ir7uv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
-size = Vector2(114, 216)
+size = Vector2(90, 159.2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir7uv"]
-size = Vector2(126, 165.2)
+size = Vector2(92, 222.20001)
 
 [node name="PlayerCar" type="CharacterBody2D" unique_id=1441090914 groups=["car"]]
 z_index = 5
@@ -16,24 +16,25 @@ script = ExtResource("1_ir7uv")
 metadata/lap = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=796002714]
-position = Vector2(0, 17.199997)
+position = Vector2(0, 6.5999985)
 shape = SubResource("RectangleShape2D_yxcl1")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1263345018]
+position = Vector2(0.10875702, -21)
+scale = Vector2(0.78248024, 1)
+polygon = PackedVector2Array(64, -53.199997, -63, -52.199997, 0, -114.2)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613242588]
-position = Vector2(0, 17.199997)
-scale = Vector2(1, 1.8)
-texture = ExtResource("1_jmyin")
+position = Vector2(0, -21.800003)
+scale = Vector2(0.42578125, 0.42578125)
+texture = ExtResource("2_ir7uv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=637950073]
-position = Vector2(0, 17.199997)
+position = Vector2(0, -21.800003)
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1161981886]
-position = Vector2(0, 31.400002)
+position = Vector2(0, 2.8999977)
 shape = SubResource("RectangleShape2D_ir7uv")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1263345018]
-position = Vector2(0, 0.80000305)
-polygon = PackedVector2Array(64, -53.199997, -63, -52.199997, 0, -114.2)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_road_detect_area_entered"]

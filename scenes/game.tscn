@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bgrvk881kbhvj" path="res://scenes/player_car.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://d0ivgrqxpdlyx" path="res://scripts/game_manager.gd" id="2_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cs4oond48riyv" path="res://scenes/road.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bunpici8048e8" path="res://scenes/goal.tscn" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dxl6tpqiap2l8" path="res://scenes/win_lose_ui.tscn" id="4_gee14"]
@@ -20,8 +19,8 @@ one_shot = true
 ignore_time_scale = true
 
 [node name="PlayerCar" parent="." unique_id=1441090914 instance=ExtResource("1_uwrxv")]
-position = Vector2(354, 355)
-rotation = 0.68025887
+position = Vector2(590, 32.000015)
+rotation = 1.4916358
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCar" unique_id=228830742]
 position = Vector2(0, -143)
@@ -31,226 +30,472 @@ position_smoothing_speed = 7.5
 
 [node name="Goal" parent="." unique_id=1259974385 instance=ExtResource("3_p57ef")]
 unique_name_in_owner = true
-position = Vector2(461, 223.99998)
-rotation = -1.0070381
-scale = Vector2(3, 3.265)
+position = Vector2(845.00006, 21.999996)
+rotation = -0.07916062
+scale = Vector2(2.6324825, 2.6324825)
 
 [node name="Checkpoints" type="Node2D" parent="." unique_id=135569286]
 
-[node name="Checkpoint" parent="Checkpoints" unique_id=816258287 instance=ExtResource("4_lbhrr")]
-position = Vector2(1078, -584)
-rotation = -0.9701762
-scale = Vector2(3.147604, 3.511123)
+[node name="Checkpoint" parent="Checkpoints" unique_id=1990037933 instance=ExtResource("4_lbhrr")]
+position = Vector2(12918, 1179)
+rotation = 0.18825196
+scale = Vector2(2.5, 2.5)
 
-[node name="Checkpoint2" parent="Checkpoints" unique_id=848603671 instance=ExtResource("4_lbhrr")]
-position = Vector2(2951, -0.99993896)
-rotation = 0.6972188
-scale = Vector2(3.147604, 3.511123)
+[node name="Checkpoint2" parent="Checkpoints" unique_id=1698591059 instance=ExtResource("4_lbhrr")]
+position = Vector2(24117, 6055)
+rotation = -1.4801246
+scale = Vector2(2.5, 2.5)
 metadata/queue = 1
 
-[node name="Checkpoint3" parent="Checkpoints" unique_id=1601840574 instance=ExtResource("4_lbhrr")]
-position = Vector2(2723, 2491.0002)
-rotation = 2.2325459
-scale = Vector2(3.147604, 3.511123)
+[node name="Checkpoint3" parent="Checkpoints" unique_id=1496662690 instance=ExtResource("4_lbhrr")]
+position = Vector2(5175.9995, 5249.9995)
+rotation = 0.15330517
+scale = Vector2(2.5, 2.5)
 metadata/queue = 2
 
-[node name="Checkpoint4" parent="Checkpoints" unique_id=1170993043 instance=ExtResource("4_lbhrr")]
-position = Vector2(441, 2341)
-rotation = -2.4313507
-scale = Vector2(3.147604, 3.511123)
+[node name="Checkpoint4" parent="Checkpoints" unique_id=773000066 instance=ExtResource("4_lbhrr")]
+position = Vector2(3352, 13677.001)
+rotation = -0.033838704
+scale = Vector2(2.5, 2.5)
 metadata/queue = 3
 
-[node name="Track4" type="Node2D" parent="." unique_id=1258069772]
+[node name="Checkpoint5" parent="Checkpoints" unique_id=102143908 instance=ExtResource("4_lbhrr")]
+position = Vector2(6432.999, 17680)
+rotation = -0.03425119
+scale = Vector2(2.5, 2.5)
+metadata/queue = 4
 
-[node name="Wall3" parent="Track4" unique_id=1590885953 instance=ExtResource("2_yqjtg")]
-position = Vector2(1045.0001, -1186)
-rotation = -0.5013943
-scale = Vector2(4.6617403, 2)
+[node name="Checkpoint6" parent="Checkpoints" unique_id=1308659777 instance=ExtResource("4_lbhrr")]
+position = Vector2(16167.001, 13193.001)
+rotation = 3.1357114
+scale = Vector2(2.5, 2.5)
+metadata/queue = 5
 
-[node name="Wall5" parent="Track4" unique_id=866409278 instance=ExtResource("2_yqjtg")]
-position = Vector2(2110, -1145)
-rotation = 0.43582126
-scale = Vector2(4.6617403, 2)
+[node name="Checkpoint7" parent="Checkpoints" unique_id=823304410 instance=ExtResource("4_lbhrr")]
+position = Vector2(22833, 19160.998)
+rotation = 1.8588737
+scale = Vector2(2.5, 2.5)
+metadata/queue = 6
 
-[node name="Wall4" parent="Track4" unique_id=2081865786 instance=ExtResource("2_yqjtg")]
-position = Vector2(1569.0001, -1337.0001)
-rotation = 0.18788236
-scale = Vector2(2.4592185, 2)
+[node name="Checkpoint8" parent="Checkpoints" unique_id=941672487 instance=ExtResource("4_lbhrr")]
+position = Vector2(11548.001, 24436)
+rotation = 3.2165425
+scale = Vector2(2.5, 2.5)
+metadata/queue = 7
 
-[node name="Road" parent="Track4" unique_id=1164650044 instance=ExtResource("3_lnu2h")]
-position = Vector2(379, 371)
-rotation = -1.069419
-scale = Vector2(2.0989642, 2.4645946)
+[node name="Checkpoint9" parent="Checkpoints" unique_id=1114482805 instance=ExtResource("4_lbhrr")]
+position = Vector2(-6599, 21522)
+rotation = 3.6247766
+scale = Vector2(2.5, 2.5)
+metadata/queue = 8
 
-[node name="Road2" parent="Track4" unique_id=557121094 instance=ExtResource("3_lnu2h")]
-position = Vector2(909, -438)
-rotation = -0.9126042
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road5" parent="Track4" unique_id=38376137 instance=ExtResource("3_lnu2h")]
-position = Vector2(1823, -733.00006)
-rotation = 0.50401443
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road4" parent="Track4" unique_id=35464441 instance=ExtResource("3_lnu2h")]
-position = Vector2(1217.0001, -701.00006)
-rotation = -0.3587393
-scale = Vector2(0.90117675, 2.505838)
-
-[node name="Road3" parent="Track4" unique_id=306851889 instance=ExtResource("3_lnu2h")]
-position = Vector2(1479.0001, -821.00006)
-rotation = -0.03255336
-scale = Vector2(0.6259967, 2.6683953)
-
-[node name="Track1" type="Node2D" parent="." unique_id=898331847]
-position = Vector2(3232, 287.99997)
-rotation = 1.668284
-
-[node name="Wall11" parent="Track1" unique_id=1806614213 instance=ExtResource("2_yqjtg")]
-position = Vector2(-53, 907.0001)
-rotation = -1.0630951
-scale = Vector2(6.08, 2)
-
-[node name="Wall14" parent="Track1" unique_id=226553211 instance=ExtResource("2_yqjtg")]
-position = Vector2(157.00024, -856.9999)
-rotation = -0.5013943
-scale = Vector2(4.6617403, 2)
-
-[node name="Wall16" parent="Track1" unique_id=761195059 instance=ExtResource("2_yqjtg")]
-position = Vector2(681.00024, -1008)
-rotation = 0.18788236
-scale = Vector2(2.4592185, 2)
-
-[node name="Road6" parent="Track1" unique_id=2094416489 instance=ExtResource("3_lnu2h")]
-position = Vector2(-508.99976, 700.0002)
-rotation = -1.069419
-scale = Vector2(2.0989642, 2.4645946)
-
-[node name="Road7" parent="Track1" unique_id=965018195 instance=ExtResource("3_lnu2h")]
-position = Vector2(21, -108.99988)
-rotation = -0.9126042
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road8" parent="Track1" unique_id=1248450790 instance=ExtResource("3_lnu2h")]
-position = Vector2(934.99976, -403.99994)
-rotation = 0.50401443
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road9" parent="Track1" unique_id=1104581283 instance=ExtResource("3_lnu2h")]
-position = Vector2(329.00024, -372)
-rotation = -0.3587393
-scale = Vector2(0.90117675, 2.505838)
-
-[node name="Road10" parent="Track1" unique_id=635572161 instance=ExtResource("3_lnu2h")]
-position = Vector2(591.00024, -491.99997)
-rotation = -0.03255336
-scale = Vector2(0.6259967, 2.6683953)
-
-[node name="Track2" type="Node2D" parent="." unique_id=1484826344]
-position = Vector2(2454, 2694)
-rotation = 3.2376273
-
-[node name="Wall11" parent="Track2" unique_id=1720500989 instance=ExtResource("2_yqjtg")]
-position = Vector2(-53, 907.0001)
-rotation = -1.0630951
-scale = Vector2(6.08, 2)
-
-[node name="Wall13" parent="Track2" unique_id=627450762 instance=ExtResource("2_yqjtg")]
-position = Vector2(-472.00012, -260.99994)
-rotation = -0.9510375
-scale = Vector2(6.08, 2)
-
-[node name="Wall14" parent="Track2" unique_id=77539880 instance=ExtResource("2_yqjtg")]
-position = Vector2(157.00024, -856.9999)
-rotation = -0.5013943
-scale = Vector2(4.6617403, 2)
-
-[node name="Wall15" parent="Track2" unique_id=1853179836 instance=ExtResource("2_yqjtg")]
-position = Vector2(1222, -815.9999)
-rotation = 0.43582126
-scale = Vector2(4.6617403, 2)
-
-[node name="Wall16" parent="Track2" unique_id=1411336250 instance=ExtResource("2_yqjtg")]
-position = Vector2(681.00024, -1008)
-rotation = 0.18788236
-scale = Vector2(2.4592185, 2)
-
-[node name="Road6" parent="Track2" unique_id=620470316 instance=ExtResource("3_lnu2h")]
-position = Vector2(-508.99976, 700.0002)
-rotation = -1.069419
-scale = Vector2(2.0989642, 2.4645946)
-
-[node name="Road7" parent="Track2" unique_id=333530244 instance=ExtResource("3_lnu2h")]
-position = Vector2(21, -108.99988)
-rotation = -0.9126042
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road8" parent="Track2" unique_id=183610857 instance=ExtResource("3_lnu2h")]
-position = Vector2(934.99976, -403.99994)
-rotation = 0.50401443
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road9" parent="Track2" unique_id=1758700379 instance=ExtResource("3_lnu2h")]
-position = Vector2(329.00024, -372)
-rotation = -0.3587393
-scale = Vector2(0.90117675, 2.505838)
-
-[node name="Road10" parent="Track2" unique_id=1645098431 instance=ExtResource("3_lnu2h")]
-position = Vector2(591.00024, -491.99997)
-rotation = -0.03255336
-scale = Vector2(0.6259967, 2.6683953)
-
-[node name="Track3" type="Node2D" parent="." unique_id=850507630]
-position = Vector2(276, 2120)
-rotation = 4.776242
-
-[node name="Wall11" parent="Track3" unique_id=816203274 instance=ExtResource("2_yqjtg")]
-position = Vector2(-53, 907.0001)
-rotation = -1.0630951
-scale = Vector2(6.08, 2)
-
-[node name="Wall12" parent="Track3" unique_id=1358397841 instance=ExtResource("2_yqjtg")]
-position = Vector2(369, 259.00012)
-rotation = -0.85189825
-scale = Vector2(3.5927854, 2)
-
-[node name="Wall14" parent="Track3" unique_id=849300646 instance=ExtResource("2_yqjtg")]
-position = Vector2(157.00024, -856.9999)
-rotation = -0.5013943
-scale = Vector2(4.6617403, 2)
-
-[node name="Wall16" parent="Track3" unique_id=423915753 instance=ExtResource("2_yqjtg")]
-position = Vector2(681.00024, -1008)
-rotation = 0.18788236
-scale = Vector2(2.4592185, 2)
-
-[node name="Road6" parent="Track3" unique_id=2076958188 instance=ExtResource("3_lnu2h")]
-position = Vector2(-508.99976, 700.0002)
-rotation = -1.069419
-scale = Vector2(2.0989642, 2.4645946)
-
-[node name="Road7" parent="Track3" unique_id=335414309 instance=ExtResource("3_lnu2h")]
-position = Vector2(21, -108.99988)
-rotation = -0.9126042
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road8" parent="Track3" unique_id=357015270 instance=ExtResource("3_lnu2h")]
-position = Vector2(934.99976, -403.99994)
-rotation = 0.50401443
-scale = Vector2(1.3585796, 2.4645946)
-
-[node name="Road9" parent="Track3" unique_id=1237985866 instance=ExtResource("3_lnu2h")]
-position = Vector2(329.00024, -372)
-rotation = -0.3587393
-scale = Vector2(0.90117675, 2.505838)
-
-[node name="Road10" parent="Track3" unique_id=686159501 instance=ExtResource("3_lnu2h")]
-position = Vector2(591.00024, -491.99997)
-rotation = -0.03255336
-scale = Vector2(0.6259967, 2.6683953)
+[node name="Checkpoint10" parent="Checkpoints" unique_id=1703741828 instance=ExtResource("4_lbhrr")]
+position = Vector2(-7147.0005, 5331.0005)
+rotation = 5.2773957
+scale = Vector2(2.5, 2.5)
+metadata/queue = 9
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1398748121]
 
 [node name="WinLoseUI" parent="CanvasLayer" unique_id=687290800 instance=ExtResource("4_gee14")]
+
+[node name="Road" type="Node" parent="." unique_id=1568712061]
+
+[node name="Road" parent="Road" unique_id=1164650044 instance=ExtResource("3_lnu2h")]
+position = Vector2(615, 32.000015)
+rotation = -0.07916062
+metadata/_edit_lock_ = true
+
+[node name="Road3" parent="Road" unique_id=475887378 instance=ExtResource("3_lnu2h")]
+position = Vector2(4993, 112.000046)
+rotation = 0.10492439
+scale = Vector2(4.2900095, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road4" parent="Road" unique_id=1437141507 instance=ExtResource("3_lnu2h")]
+position = Vector2(7979, 482.99997)
+rotation = 0.13352227
+scale = Vector2(7.489175, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road5" parent="Road" unique_id=1016825660 instance=ExtResource("3_lnu2h")]
+position = Vector2(14966.001, 1488.0001)
+rotation = 0.14779331
+scale = Vector2(20.268732, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road6" parent="Road" unique_id=1311982250 instance=ExtResource("3_lnu2h")]
+position = Vector2(21355.002, 2578.0002)
+rotation = 0.2572445
+scale = Vector2(5.355665, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road7" parent="Road" unique_id=532075173 instance=ExtResource("3_lnu2h")]
+position = Vector2(23251, 3397)
+rotation = 0.67247045
+scale = Vector2(3.5575988, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road8" parent="Road" unique_id=627952858 instance=ExtResource("3_lnu2h")]
+position = Vector2(24008, 4610.999)
+rotation = 1.3603704
+scale = Vector2(3.5575988, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road9" parent="Road" unique_id=146620333 instance=ExtResource("3_lnu2h")]
+position = Vector2(24096, 6294.9995)
+rotation = 1.683885
+scale = Vector2(3.5575988, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road10" parent="Road" unique_id=1111971782 instance=ExtResource("3_lnu2h")]
+position = Vector2(23441.998, 7572)
+rotation = 2.4041445
+scale = Vector2(3.5575988, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road11" parent="Road" unique_id=183971970 instance=ExtResource("3_lnu2h")]
+position = Vector2(22150, 7994.9995)
+rotation = 3.249024
+scale = Vector2(3.5575988, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road13" parent="Road" unique_id=614750870 instance=ExtResource("3_lnu2h")]
+position = Vector2(15806.999, 6061)
+rotation = 3.1999464
+scale = Vector2(3.5575988, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road14" parent="Road" unique_id=1556572986 instance=ExtResource("3_lnu2h")]
+position = Vector2(13061.001, 6341.001)
+rotation = 2.9680016
+scale = Vector2(7.727506, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road15" parent="Road" unique_id=415364216 instance=ExtResource("3_lnu2h")]
+position = Vector2(10496.001, 6658.999)
+rotation = 3.166108
+scale = Vector2(3.0342646, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road16" parent="Road" unique_id=334646987 instance=ExtResource("3_lnu2h")]
+position = Vector2(7464.0005, 5935.0005)
+rotation = 3.4332168
+scale = Vector2(9.560018, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road17" parent="Road" unique_id=1000749859 instance=ExtResource("3_lnu2h")]
+position = Vector2(2781, 5205.001)
+rotation = 3.1580112
+scale = Vector2(9.560018, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road18" parent="Road" unique_id=331821961 instance=ExtResource("3_lnu2h")]
+position = Vector2(-358.00018, 5440.9995)
+rotation = 2.796327
+scale = Vector2(3.596973, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road19" parent="Road" unique_id=1306121427 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1600.9999, 6331.0005)
+rotation = 2.237143
+scale = Vector2(3.596973, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road20" parent="Road" unique_id=1618037493 instance=ExtResource("3_lnu2h")]
+position = Vector2(-2107, 7333)
+rotation = 1.5707964
+scale = Vector2(2.0227344, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road21" parent="Road" unique_id=187143422 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1803, 8302)
+rotation = 1.0659344
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road22" parent="Road" unique_id=1572871695 instance=ExtResource("3_lnu2h")]
+position = Vector2(-940.9995, 9177)
+rotation = 0.49748075
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road24" parent="Road" unique_id=1507189538 instance=ExtResource("3_lnu2h")]
+position = Vector2(6554, 11489)
+rotation = 1.9833196
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road25" parent="Road" unique_id=259358527 instance=ExtResource("3_lnu2h")]
+position = Vector2(5793.0005, 12504)
+rotation = 2.4468622
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road26" parent="Road" unique_id=872570576 instance=ExtResource("3_lnu2h")]
+position = Vector2(4646.9995, 13308)
+rotation = 2.6201603
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road28" parent="Road" unique_id=109288527 instance=ExtResource("3_lnu2h")]
+position = Vector2(-2452, 14373)
+rotation = 2.2991602
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road29" parent="Road" unique_id=540860379 instance=ExtResource("3_lnu2h")]
+position = Vector2(-2895, 15432)
+rotation = 1.6340445
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road30" parent="Road" unique_id=1612425549 instance=ExtResource("3_lnu2h")]
+position = Vector2(-2586.0005, 16535)
+rotation = 0.9559231
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road31" parent="Road" unique_id=2037986075 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1645.9994, 17235)
+rotation = 0.31874353
+scale = Vector2(2.8961282, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road32" parent="Road" unique_id=1963013276 instance=ExtResource("3_lnu2h")]
+position = Vector2(1126.0002, 17610)
+rotation = 0.07923858
+scale = Vector2(8.851973, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road33" parent="Road" unique_id=1294996863 instance=ExtResource("3_lnu2h")]
+position = Vector2(5126.0005, 17727)
+rotation = -0.03690762
+scale = Vector2(7.1435986, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road34" parent="Road" unique_id=2061943436 instance=ExtResource("3_lnu2h")]
+position = Vector2(8331, 16782.002)
+rotation = -0.5404611
+scale = Vector2(7.1435986, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road35" parent="Road" unique_id=799187351 instance=ExtResource("3_lnu2h")]
+position = Vector2(10354.001, 15440)
+rotation = -0.7131393
+scale = Vector2(2.605425, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road36" parent="Road" unique_id=1946728831 instance=ExtResource("3_lnu2h")]
+position = Vector2(11813, 14394.999)
+rotation = -0.5770393
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road37" parent="Road" unique_id=1648490848 instance=ExtResource("3_lnu2h")]
+position = Vector2(13843, 13511.001)
+rotation = -0.24504367
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road38" parent="Road" unique_id=320856761 instance=ExtResource("3_lnu2h")]
+position = Vector2(16071, 13198)
+rotation = -0.025709555
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road39" parent="Road" unique_id=86385710 instance=ExtResource("3_lnu2h")]
+position = Vector2(18290.998, 13447.999)
+rotation = 0.24244665
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road40" parent="Road" unique_id=42703436 instance=ExtResource("3_lnu2h")]
+position = Vector2(20330, 14307)
+rotation = 0.55962324
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road41" parent="Road" unique_id=659238816 instance=ExtResource("3_lnu2h")]
+position = Vector2(21860.998, 15800.001)
+rotation = 0.99313104
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road42" parent="Road" unique_id=510016379 instance=ExtResource("3_lnu2h")]
+position = Vector2(22694, 17808)
+rotation = 1.3682054
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road43" parent="Road" unique_id=1230857834 instance=ExtResource("3_lnu2h")]
+position = Vector2(22593, 19918.002)
+rotation = 1.8767567
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road44" parent="Road" unique_id=1904081050 instance=ExtResource("3_lnu2h")]
+position = Vector2(21746, 22057)
+rotation = 2.0156617
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road45" parent="Road" unique_id=116258519 instance=ExtResource("3_lnu2h")]
+position = Vector2(20491.002, 23902)
+rotation = 2.3287256
+scale = Vector2(4.6345363, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road46" parent="Road" unique_id=1017632053 instance=ExtResource("3_lnu2h")]
+position = Vector2(19344, 24849.002)
+rotation = 2.7783394
+scale = Vector2(1.9879446, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road47" parent="Road" unique_id=330745721 instance=ExtResource("3_lnu2h")]
+position = Vector2(18455, 25068)
+rotation = 3.0226746
+scale = Vector2(1.9879446, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road48" parent="Road" unique_id=565500769 instance=ExtResource("3_lnu2h")]
+position = Vector2(14713, 24775)
+rotation = 3.2476244
+scale = Vector2(13.079361, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road49" parent="Road" unique_id=1019945500 instance=ExtResource("3_lnu2h")]
+position = Vector2(8054.0005, 24281.002)
+rotation = 3.1822197
+scale = Vector2(13.355885, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road50" parent="Road" unique_id=671244601 instance=ExtResource("3_lnu2h")]
+position = Vector2(1413.0001, 23771)
+rotation = 3.258016
+scale = Vector2(13.079361, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road51" parent="Road" unique_id=850976071 instance=ExtResource("3_lnu2h")]
+position = Vector2(-3205.0002, 22927)
+rotation = 3.472928
+scale = Vector2(5.7861495, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road52" parent="Road" unique_id=1221486141 instance=ExtResource("3_lnu2h")]
+position = Vector2(-5879.001, 21848.002)
+rotation = 3.5772097
+scale = Vector2(5.7861495, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road53" parent="Road" unique_id=1688258988 instance=ExtResource("3_lnu2h")]
+position = Vector2(-8322.999, 20419)
+rotation = 3.7654173
+scale = Vector2(5.7861495, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road54" parent="Road" unique_id=1477223759 instance=ExtResource("3_lnu2h")]
+position = Vector2(-9665, 19165)
+rotation = 4.256221
+scale = Vector2(2.3410518, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road55" parent="Road" unique_id=1699404040 instance=ExtResource("3_lnu2h")]
+position = Vector2(-9931, 18170.998)
+rotation = 4.631802
+scale = Vector2(2.3410518, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road56" parent="Road" unique_id=2087363268 instance=ExtResource("3_lnu2h")]
+position = Vector2(-9792, 17185.004)
+rotation = 5.063361
+scale = Vector2(2.3410518, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road57" parent="Road" unique_id=488180335 instance=ExtResource("3_lnu2h")]
+position = Vector2(-9104, 15552.999)
+rotation = 5.137167
+scale = Vector2(4.8172045, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road58" parent="Road" unique_id=273382999 instance=ExtResource("3_lnu2h")]
+position = Vector2(-8574, 13343.001)
+rotation = 4.7570558
+scale = Vector2(4.8172045, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road59" parent="Road" unique_id=1903931506 instance=ExtResource("3_lnu2h")]
+position = Vector2(-8682, 10540)
+rotation = 4.606219
+scale = Vector2(6.4173946, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road60" parent="Road" unique_id=430337644 instance=ExtResource("3_lnu2h")]
+position = Vector2(-8693, 8262)
+rotation = 4.9244785
+scale = Vector2(3.132419, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road61" parent="Road" unique_id=1379249904 instance=ExtResource("3_lnu2h")]
+position = Vector2(-7806.0005, 6376.9995)
+rotation = 5.2750335
+scale = Vector2(5.6562567, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road62" parent="Road" unique_id=421118144 instance=ExtResource("3_lnu2h")]
+position = Vector2(-5806, 3427)
+rotation = 5.333633
+scale = Vector2(8.478394, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road63" parent="Road" unique_id=456007220 instance=ExtResource("3_lnu2h")]
+position = Vector2(-3651.9998, 1327)
+rotation = 5.876866
+scale = Vector2(4.502388, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road64" parent="Road" unique_id=463230994 instance=ExtResource("3_lnu2h")]
+position = Vector2(-949, 344.99997)
+rotation = 6.030627
+scale = Vector2(4.502388, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road65" parent="Road" unique_id=1739524890 instance=ExtResource("3_lnu2h")]
+position = Vector2(-2306, 743.00006)
+rotation = 5.855692
+scale = Vector2(1.3647145, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road27" parent="Road" unique_id=1266568746 instance=ExtResource("3_lnu2h")]
+position = Vector2(976, 13795)
+rotation = 3.0922344
+scale = Vector2(12.551792, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road23" parent="Road" unique_id=1606134810 instance=ExtResource("3_lnu2h")]
+position = Vector2(3023.9995, 10261)
+rotation = 0.221831
+scale = Vector2(13.6438675, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road12" parent="Road" unique_id=1170435786 instance=ExtResource("3_lnu2h")]
+position = Vector2(18963.002, 6995.0005)
+rotation = 3.507645
+scale = Vector2(9.873243, 2)
+metadata/_edit_lock_ = true
+
+[node name="Road2" parent="Road" unique_id=1641992211 instance=ExtResource("3_lnu2h")]
+position = Vector2(2518, -1)
+scale = Vector2(5.56, 2)
+metadata/_edit_lock_ = true
+
+[node name="RoadLine" type="Line2D" parent="." unique_id=973752923]
+z_index = -2
+points = PackedVector2Array(159, 77, 1089, 2, 3929, 16, 6060, 250, 9786, 738, 20017, 2239, 22525, 2859, 23855, 3826, 24162, 5483, 23983, 7064, 22811, 8057, 21255, 7900, 16607, 6095, 15025, 6004, 11259, 6672, 9776, 6697, 5227, 5279, 538, 5172, -987, 5650, -2110, 6814, -2122, 7619, -1576, 8789, -422, 9516, 6749, 11125, 6327, 11981, 5291, 12994, 4160, 13613, -2060, 13979, -2791, 14739, -2909, 15915, -2223, 17024, -1131, 17401, 3276, 17812, 6974, 17620, 9822, 15831, 10807, 15065, 12704, 13793, 14865, 13281, 17116, 13135, 19255, 13720, 21259, 14827, 22410, 16638, 22910, 18915, 22240, 20997, 21242, 23115, 19789, 24645, 18955, 25050, 18019, 25080, 11398, 24451, 4736, 24159, -1802, 23390, -4543, 22473, -7126, 21263, -9423, 19687, -9867, 18764, -9963, 17705, -9620, 16709, -8640, 14509, -8545, 12229, -8798, 9083, -8539, 7557, -7065, 5160, -4644, 1839, -2607, 882, -1982, 618)
+closed = true
+width = 15.0
+default_color = Color(0.81, 0.63477, 0.33210003, 1)
+joint_mode = 2
+metadata/_edit_lock_ = true
 
 [connection signal="timeout" from="GameManager/StopGame" to="GameManager" method="_on_stop_game_timeout"]

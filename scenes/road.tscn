@@ -1,10 +1,30 @@
-[gd_scene format=3 uid="uid://cs4oond48riyv"]
+[gd_scene format=4 uid="uid://cs4oond48riyv"]
+
+[ext_resource type="Texture2D" uid="uid://betttld43ta5x" path="res://assets/textures/road.svg" id="1_mv8x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
-size = Vector2(40, 40)
+size = Vector2(34.4, 38.600002)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_my2y2"]
+diffuse_texture = ExtResource("1_mv8x7")
+texture_filter = 1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fy6l0"]
+texture = SubResource("CanvasTexture_my2y2")
+0:0/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yxcl1"]
+sources/0 = SubResource("TileSetAtlasSource_fy6l0")
 
 [node name="Road" type="Area2D" unique_id=1164650044]
-z_index = -2
+z_index = -3
 scale = Vector2(2, 2)
 collision_layer = 2
 
@@ -12,10 +32,7 @@ collision_layer = 2
 scale = Vector2(15, 10)
 shape = SubResource("RectangleShape2D_yxcl1")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=631690427]
-offset_right = 40.0
-offset_bottom = 40.0
-offset_transform_enabled = true
-offset_transform_position_ratio = Vector2(-0.5, -0.5)
-offset_transform_scale = Vector2(15, 10)
-color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1364706678]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD+//3/AAACAAAAAAD+//7/AAACAAEAAAD///3/AAADAAAAAAD///7/AAADAAEAAAD+/wEAAAACAAAAAAD+/wIAAAACAAEAAAD//wEAAAADAAAAAAD//wIAAAADAAEAAAAAAAEAAAACAAAAAAAAAAIAAAACAAEAAAABAAEAAAADAAAAAAABAAIAAAADAAEAAAAAAP3/AAACAAAAAAAAAP7/AAACAAEAAAABAP3/AAADAAAAAAABAP7/AAADAAEAAAD+/wAAAAACAAEAAAD8//3/AAACAAAAAAD8//7/AAACAAEAAAD8/wEAAAACAAAAAAD8/wIAAAACAAEAAAD9/wIAAAADAAEAAAD9/wEAAAADAAAAAAD9//7/AAADAAEAAAD9//3/AAADAAAAAAACAP3/AAACAAAAAAACAP7/AAACAAEAAAACAAEAAAACAAAAAAACAAIAAAACAAEAAAADAAIAAAADAAEAAAADAAEAAAADAAAAAAADAP7/AAADAAEAAAADAP3/AAADAAAAAAD9/wAAAAADAAEAAAD8/wAAAAACAAEAAAD8////AAACAAAAAAD9////AAADAAAAAAD+////AAACAAAAAAD/////AAADAAAAAAAAAP//AAACAAAAAAABAP//AAADAAAAAAACAP//AAACAAAAAAADAP//AAADAAAAAAADAAAAAAADAAEAAAACAAAAAAACAAEAAAABAAAAAAADAAEAAAAAAAAAAAACAAEAAAD//wAAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_yxcl1")
