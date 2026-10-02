@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bunpici8048e8" path="res://scenes/goal.tscn" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dxl6tpqiap2l8" path="res://scenes/win_lose_ui.tscn" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://d3308x7slojqv" path="res://scenes/obstacle_cone.tscn" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://cwfsxh15hkkt6" path="res://scenes/obstacle.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="9_0tnpc"]
 
 [node name="Main" type="Node2D" unique_id=2090959149]
 
@@ -497,5 +500,51 @@ width = 15.0
 default_color = Color(0.81, 0.63477, 0.33210003, 1)
 joint_mode = 2
 metadata/_edit_lock_ = true
+
+[node name="Obstacle_Cone" parent="." unique_id=1037469282 instance=ExtResource("7_gee14")]
+position = Vector2(1534, -96)
+
+[node name="Obstacle_Cone2" parent="." unique_id=636412165 instance=ExtResource("7_gee14")]
+position = Vector2(1605, -81)
+
+[node name="Obstacle_Cone3" parent="." unique_id=1315130981 instance=ExtResource("7_gee14")]
+position = Vector2(1702, -50)
+
+[node name="Obstacle_Cone4" parent="." unique_id=7888524 instance=ExtResource("7_gee14")]
+position = Vector2(1749, -1)
+
+[node name="Obstacle_Cone5" parent="." unique_id=673309931 instance=ExtResource("7_gee14")]
+position = Vector2(1632, -177)
+rotation = 0.5778437
+
+[node name="Obstacle_Cone6" parent="." unique_id=1983842219 instance=ExtResource("7_gee14")]
+position = Vector2(1703, -162)
+rotation = 0.5778437
+
+[node name="Obstacle_Cone7" parent="." unique_id=124095235 instance=ExtResource("7_gee14")]
+position = Vector2(1800, -131)
+rotation = 0.5778437
+
+[node name="Obstacle_Cone8" parent="." unique_id=375948133 instance=ExtResource("7_gee14")]
+position = Vector2(1847, -82)
+rotation = 0.5778437
+
+[node name="Obstacle" parent="." unique_id=1998894635 instance=ExtResource("7_u5sy4")]
+position = Vector2(1373, 33)
+
+[node name="Obstacle2" parent="." unique_id=107500908 instance=ExtResource("7_u5sy4")]
+position = Vector2(1442, 108)
+
+[node name="Obstacle3" parent="." unique_id=1794965860 instance=ExtResource("7_u5sy4")]
+position = Vector2(1358, 124)
+
+[node name="Obstacle4" parent="." unique_id=2123769482 instance=ExtResource("7_u5sy4")]
+position = Vector2(1404, 181)
+
+[node name="Wall" parent="." unique_id=306052144 instance=ExtResource("9_0tnpc")]
+position = Vector2(1456, -408)
+
+[node name="Wall2" parent="." unique_id=815173394 instance=ExtResource("9_0tnpc")]
+position = Vector2(1841, -409)
 
 [connection signal="timeout" from="GameManager/StopGame" to="GameManager" method="_on_stop_game_timeout"]

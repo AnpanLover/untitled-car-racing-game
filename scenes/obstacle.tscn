@@ -10,8 +10,6 @@ radius = 118.258194
 
 [node name="Obstacle" type="RigidBody2D" unique_id=1037469282]
 z_index = 1
-collision_layer = 2
-collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_p57ef")
 gravity_scale = 0.0
 linear_damp = 4.0

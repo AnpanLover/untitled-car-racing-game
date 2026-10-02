@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d3308x7slojqv"]
+
+[ext_resource type="Texture2D" uid="uid://bhuqyw48fr2lu" path="res://assets/textures/traffic_cone.svg" id="1_f2o6k"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p57ef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abba5"]
+size = Vector2(215, 215)
+
+[node name="Obstacle_Cone" type="RigidBody2D" unique_id=1037469282]
+z_index = 1
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_p57ef")
+gravity_scale = 0.0
+linear_damp = 4.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022504257]
+rotation = 0.7853982
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_abba5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=595733879]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_f2o6k")
