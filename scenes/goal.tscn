@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bunpici8048e8"]
 
 [ext_resource type="Script" uid="uid://cgfck0re5rs0n" path="res://scripts/goal.gd" id="1_jbojv"]
-[ext_resource type="Texture2D" uid="uid://beknuoccvvlmh" path="res://assets/goal.svg" id="2_sx1j4"]
+[ext_resource type="Texture2D" uid="uid://beknuoccvvlmh" path="res://assets/textures/goal.svg" id="2_sx1j4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
 size = Vector2(40, 304)

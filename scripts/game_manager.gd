@@ -30,9 +30,11 @@ func car_win(car: CharacterBody2D):
 	print("Winner: ", car)
 	car.add_to_group("winner")
 	var ui = $"../CanvasLayer/WinLoseUI"
+	var confetti = $"../CanvasLayer/Confetti"
 	var anim = ui.get_node("AnimationPlayer")
 	var text = ui.get_node("MarginContainer/VBoxContainer/TimeUsedLabel")
 	
+	confetti.emitting = true
 	ui.visible = true
 	text.text = "Time used: " + time_pretty(time_passed)
 	anim.play("FadeIn")

@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 			velocity += normal * (collider.mass * 500)
 		else:
 			velocity = velocity.bounce(normal) * 0.8
-			current_rotation -= velocity.angle() * 0.2
+			current_rotation -= velocity.angle() * 0.1
 	
 	rotation = lerp_angle(rotation, current_rotation, 0.2)
 
