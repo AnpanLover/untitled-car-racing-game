@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     style="fill:#ffffff"
+     transform="scale(8)">
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke-width:69.4707;stroke-linecap:round"
+       id="circle1"
+       cx="32"
+       cy="32"
+       r="32" />
+  </g>
+</svg>

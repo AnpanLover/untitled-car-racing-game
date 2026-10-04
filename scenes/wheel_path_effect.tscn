@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c1054fjv7th2l"]
+
+[ext_resource type="Script" uid="uid://kj2csgugx0va" path="res://scripts/wheel_path_effect.gd" id="1_35vcd"]
+
+[sub_resource type="Curve" id="Curve_35vcd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2712329, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="WheelPathEffect" type="Line2D" unique_id=1875711561]
+top_level = true
+width = 20.0
+width_curve = SubResource("Curve_35vcd")
+default_color = Color(0, 0, 0, 0.02745098)
+script = ExtResource("1_35vcd")
+max_length = 80
+interval = 0.03
+
+[node name="Timer" type="Timer" parent="." unique_id=1343660522]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" uid="uid://d4kk8e6ljxgxe" path="res://scripts/player_car.gd" id="1_ir7uv"]
 [ext_resource type="Texture2D" uid="uid://bwsusvvtfhu2q" path="res://assets/textures/racing_car.svg" id="2_ir7uv"]
+[ext_resource type="Texture2D" uid="uid://xqb1qo68qg5" path="res://assets/textures/circle.svg" id="3_v64uw"]
+[ext_resource type="PackedScene" uid="uid://c1054fjv7th2l" path="res://scenes/wheel_path_effect.tscn" id="4_s2c5k"]
+
+[sub_resource type="Curve" id="Curve_e8h6m"]
+_data = [Vector2(0.13081396, 0.2851711), 0.0, 0.6293136, 0, 0, Vector2(1, 1), 0.5958599, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_04idr"]
+offsets = PackedFloat32Array(0.493266, 1)
+colors = PackedColorArray(1, 1, 1, 0.5176471, 1, 1, 1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
 size = Vector2(90, 159.2)
@@ -15,22 +25,63 @@ motion_mode = 1
 script = ExtResource("1_ir7uv")
 metadata/lap = 0
 
+[node name="DustEffect" type="Marker2D" parent="." unique_id=1988664105]
+position = Vector2(0, 76.8)
+gizmo_extents = 90.1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="DustEffect" unique_id=369837270]
+amount = 28
+texture = ExtResource("3_v64uw")
+lifetime = 0.75
+emission_shape = 3
+emission_rect_extents = Vector2(20, 1)
+direction = Vector2(0, 90)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+scale_amount_min = 0.15
+scale_amount_max = 0.25
+scale_amount_curve = SubResource("Curve_e8h6m")
+color = Color(1, 1, 1, 0.23529412)
+color_ramp = SubResource("Gradient_04idr")
+
+[node name="TopLeftWheel" type="Marker2D" parent="." unique_id=1477646086]
+position = Vector2(-32, -56.199997)
+
+[node name="WheelPathEffect" parent="TopLeftWheel" unique_id=1875711561 instance=ExtResource("4_s2c5k")]
+
+[node name="TopRightWheel" type="Marker2D" parent="." unique_id=1034065202]
+position = Vector2(33, -56.199997)
+
+[node name="WheelPathEffect" parent="TopRightWheel" unique_id=110499217 instance=ExtResource("4_s2c5k")]
+
+[node name="BottomLeftWheel" type="Marker2D" parent="." unique_id=650828869]
+position = Vector2(-32, 56.800003)
+
+[node name="WheelPathEffect" parent="BottomLeftWheel" unique_id=932897439 instance=ExtResource("4_s2c5k")]
+
+[node name="BottomRightWheel" type="Marker2D" parent="." unique_id=1128947610]
+position = Vector2(33, 56.800003)
+
+[node name="WheelPathEffect" parent="BottomRightWheel" unique_id=601294825 instance=ExtResource("4_s2c5k")]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=796002714]
-position = Vector2(0, 6.5999985)
+position = Vector2(0, 25.400002)
 shape = SubResource("RectangleShape2D_yxcl1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1263345018]
-position = Vector2(0.10875702, -21)
+position = Vector2(0.10875702, -2.199997)
 scale = Vector2(0.78248024, 1)
 polygon = PackedVector2Array(64, -53.199997, -63, -52.199997, 0, -114.2)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613242588]
-position = Vector2(0, -21.800003)
+position = Vector2(0, -3)
 scale = Vector2(0.42578125, 0.42578125)
 texture = ExtResource("2_ir7uv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=637950073]
-position = Vector2(0, -21.800003)
+position = Vector2(0, -3)
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1161981886]
