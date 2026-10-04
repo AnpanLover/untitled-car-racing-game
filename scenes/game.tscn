@@ -26,10 +26,10 @@ position = Vector2(590, 32.000015)
 rotation = 1.4916358
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCar" unique_id=228830742]
-position = Vector2(0, -143)
-zoom = Vector2(0.6, 0.6)
+position = Vector2(13.557729, -313.91092)
+zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
-position_smoothing_speed = 7.5
+position_smoothing_speed = 6.0
 
 [node name="Goal" parent="." unique_id=1259974385 instance=ExtResource("3_p57ef")]
 unique_name_in_owner = true

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var speed = 75.0
-var max_speed = 3000.0
+var max_speed = 2000.0
 const steering_speed = 5.0
 var accel = 0.0
 var is_on_road = false
