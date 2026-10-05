@@ -88,4 +88,10 @@ collision_mask = 6
 position = Vector2(0, 2.8999977)
 shape = SubResource("RectangleShape2D_ir7uv")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1947177544]
+position = Vector2(13.557729, -313.91092)
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_road_detect_area_entered"]

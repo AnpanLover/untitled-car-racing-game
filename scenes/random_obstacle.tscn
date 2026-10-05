@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://coxc2ixwk24n5"]
+
+[ext_resource type="Script" uid="uid://k4ndyh34f13r" path="res://scripts/random_obstacle.gd" id="1_8m4rx"]
+
+[node name="RandomObstacle" type="Marker2D" unique_id=266887934]
+gizmo_extents = 80.4
+script = ExtResource("1_8m4rx")

@@ -10,8 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dtroadmbupf2c" path="res://scenes/wall_medium.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://bpbyvbqc0h5v" path="res://scenes/wall_long.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="10_vtaks"]
-[ext_resource type="PackedScene" uid="uid://b0voarbyxoh3t" path="res://scenes/wheel_group.tscn" id="11_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://0sylo2b1ixkw" path="res://scenes/cone_group.tscn" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://coxc2ixwk24n5" path="res://scenes/random_obstacle.tscn" id="11_kvpfn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
 atlas = ExtResource("5_gee14")
@@ -38,12 +37,6 @@ ignore_time_scale = true
 [node name="PlayerCar" parent="." unique_id=1441090914 instance=ExtResource("1_uwrxv")]
 position = Vector2(590, 32.000015)
 rotation = 1.4916358
-
-[node name="Camera2D" type="Camera2D" parent="PlayerCar" unique_id=228830742]
-position = Vector2(13.557729, -313.91092)
-zoom = Vector2(0.7, 0.7)
-position_smoothing_enabled = true
-position_smoothing_speed = 6.0
 
 [node name="Goal" parent="." unique_id=1259974385 instance=ExtResource("3_p57ef")]
 unique_name_in_owner = true
@@ -962,10 +955,168 @@ rotation = 2.88069
 position = Vector2(-6847.9995, 4184)
 rotation = -0.94912624
 
-[node name="WheelGroup" parent="." unique_id=1920061961 instance=ExtResource("11_kvpfn")]
-position = Vector2(1352, 216)
+[node name="Obstacle" type="Node" parent="." unique_id=2024208512]
 
-[node name="ConeGroup" parent="." unique_id=817836155 instance=ExtResource("12_dinhu")]
-position = Vector2(1664, 512)
+[node name="RandomObstacle" parent="Obstacle" unique_id=266887934 instance=ExtResource("11_kvpfn")]
+position = Vector2(4100, 218)
+
+[node name="RandomObstacle2" parent="Obstacle" unique_id=1841403574 instance=ExtResource("11_kvpfn")]
+position = Vector2(6970, 201)
+
+[node name="RandomObstacle3" parent="Obstacle" unique_id=265437971 instance=ExtResource("11_kvpfn")]
+position = Vector2(5560, 21)
+
+[node name="RandomObstacle4" parent="Obstacle" unique_id=326402348 instance=ExtResource("11_kvpfn")]
+position = Vector2(8928, 547)
+
+[node name="RandomObstacle5" parent="Obstacle" unique_id=613007345 instance=ExtResource("11_kvpfn")]
+position = Vector2(11613, 1239)
+
+[node name="RandomObstacle6" parent="Obstacle" unique_id=426271133 instance=ExtResource("11_kvpfn")]
+position = Vector2(14805, 1639)
+
+[node name="RandomObstacle7" parent="Obstacle" unique_id=1038232915 instance=ExtResource("11_kvpfn")]
+position = Vector2(17811, 2112)
+
+[node name="RandomObstacle8" parent="Obstacle" unique_id=893649116 instance=ExtResource("11_kvpfn")]
+position = Vector2(21182, 2314)
+
+[node name="RandomObstacle9" parent="Obstacle" unique_id=440196956 instance=ExtResource("11_kvpfn")]
+position = Vector2(23281, 3185)
+
+[node name="RandomObstacle10" parent="Obstacle" unique_id=771642268 instance=ExtResource("11_kvpfn")]
+position = Vector2(24173, 4628)
+
+[node name="RandomObstacle11" parent="Obstacle" unique_id=638379707 instance=ExtResource("11_kvpfn")]
+position = Vector2(23717, 6835)
+
+[node name="RandomObstacle12" parent="Obstacle" unique_id=479511901 instance=ExtResource("11_kvpfn")]
+position = Vector2(21962, 7667)
+
+[node name="RandomObstacle13" parent="Obstacle" unique_id=1084804014 instance=ExtResource("11_kvpfn")]
+position = Vector2(16531, 6381)
+
+[node name="RandomObstacle14" parent="Obstacle" unique_id=521349013 instance=ExtResource("11_kvpfn")]
+position = Vector2(13466, 6430)
+
+[node name="RandomObstacle15" parent="Obstacle" unique_id=1799478798 instance=ExtResource("11_kvpfn")]
+position = Vector2(9272, 6685)
+
+[node name="RandomObstacle16" parent="Obstacle" unique_id=366834584 instance=ExtResource("11_kvpfn")]
+position = Vector2(5134, 5068)
+
+[node name="RandomObstacle17" parent="Obstacle" unique_id=234617834 instance=ExtResource("11_kvpfn")]
+position = Vector2(248, 5382)
+
+[node name="RandomObstacle18" parent="Obstacle" unique_id=1936833520 instance=ExtResource("11_kvpfn")]
+position = Vector2(-1697, 7248)
+
+[node name="RandomObstacle19" parent="Obstacle" unique_id=53906600 instance=ExtResource("11_kvpfn")]
+position = Vector2(-251, 8983)
+
+[node name="RandomObstacle20" parent="Obstacle" unique_id=1679106220 instance=ExtResource("11_kvpfn")]
+position = Vector2(1424, 10109)
+
+[node name="RandomObstacle21" parent="Obstacle" unique_id=437777928 instance=ExtResource("11_kvpfn")]
+position = Vector2(5133, 12651)
+
+[node name="RandomObstacle22" parent="Obstacle" unique_id=1888550407 instance=ExtResource("11_kvpfn")]
+position = Vector2(676, 13528)
+
+[node name="RandomObstacle23" parent="Obstacle" unique_id=1742447380 instance=ExtResource("11_kvpfn")]
+position = Vector2(-2465, 15602)
+
+[node name="RandomObstacle24" parent="Obstacle" unique_id=309832399 instance=ExtResource("11_kvpfn")]
+position = Vector2(-441, 17187)
+
+[node name="RandomObstacle25" parent="Obstacle" unique_id=1553473598 instance=ExtResource("11_kvpfn")]
+position = Vector2(2271, 17416)
+
+[node name="RandomObstacle26" parent="Obstacle" unique_id=1931260066 instance=ExtResource("11_kvpfn")]
+position = Vector2(6529, 17386)
+
+[node name="RandomObstacle27" parent="Obstacle" unique_id=750226004 instance=ExtResource("11_kvpfn")]
+position = Vector2(11006, 15362)
+
+[node name="RandomObstacle28" parent="Obstacle" unique_id=1813967059 instance=ExtResource("11_kvpfn")]
+position = Vector2(13569, 13966)
+
+[node name="RandomObstacle29" parent="Obstacle" unique_id=1380695481 instance=ExtResource("11_kvpfn")]
+position = Vector2(16082, 13049)
+
+[node name="RandomObstacle30" parent="Obstacle" unique_id=2047478332 instance=ExtResource("11_kvpfn")]
+position = Vector2(19622, 14066)
+
+[node name="RandomObstacle31" parent="Obstacle" unique_id=38128798 instance=ExtResource("11_kvpfn")]
+position = Vector2(22234, 17227)
+
+[node name="RandomObstacle32" parent="Obstacle" unique_id=85890688 instance=ExtResource("11_kvpfn")]
+position = Vector2(22673, 20966)
+
+[node name="RandomObstacle33" parent="Obstacle" unique_id=907424826 instance=ExtResource("11_kvpfn")]
+position = Vector2(20689, 23130)
+
+[node name="RandomObstacle34" parent="Obstacle" unique_id=1180027535 instance=ExtResource("11_kvpfn")]
+position = Vector2(17548, 25373)
+
+[node name="RandomObstacle35" parent="Obstacle" unique_id=634825527 instance=ExtResource("11_kvpfn")]
+position = Vector2(14876, 25104)
+
+[node name="RandomObstacle36" parent="Obstacle" unique_id=1148373037 instance=ExtResource("11_kvpfn")]
+position = Vector2(10937, 24636)
+
+[node name="RandomObstacle37" parent="Obstacle" unique_id=1470591462 instance=ExtResource("11_kvpfn")]
+position = Vector2(8993, 24137)
+
+[node name="RandomObstacle38" parent="Obstacle" unique_id=486084810 instance=ExtResource("11_kvpfn")]
+position = Vector2(5533, 23987)
+
+[node name="RandomObstacle39" parent="Obstacle" unique_id=130561989 instance=ExtResource("11_kvpfn")]
+position = Vector2(2083, 23987)
+
+[node name="RandomObstacle40" parent="Obstacle" unique_id=1353175624 instance=ExtResource("11_kvpfn")]
+position = Vector2(-1237, 23598)
+
+[node name="RandomObstacle41" parent="Obstacle" unique_id=1182338263 instance=ExtResource("11_kvpfn")]
+position = Vector2(-6173, 21953)
+
+[node name="RandomObstacle42" parent="Obstacle" unique_id=1043310019 instance=ExtResource("11_kvpfn")]
+position = Vector2(-8058, 20168)
+
+[node name="RandomObstacle43" parent="Obstacle" unique_id=250249120 instance=ExtResource("11_kvpfn")]
+position = Vector2(-9354, 18533)
+
+[node name="RandomObstacle44" parent="Obstacle" unique_id=2061415498 instance=ExtResource("11_kvpfn")]
+position = Vector2(-9234, 16930)
+
+[node name="RandomObstacle45" parent="Obstacle" unique_id=1674740622 instance=ExtResource("11_kvpfn")]
+position = Vector2(-8575, 15911)
+
+[node name="RandomObstacle46" parent="Obstacle" unique_id=2018847267 instance=ExtResource("11_kvpfn")]
+position = Vector2(-9332, 13274)
+
+[node name="RandomObstacle47" parent="Obstacle" unique_id=1299750475 instance=ExtResource("11_kvpfn")]
+position = Vector2(-9422, 11281)
+
+[node name="RandomObstacle48" parent="Obstacle" unique_id=1323040028 instance=ExtResource("11_kvpfn")]
+position = Vector2(-7684, 10090)
+
+[node name="RandomObstacle49" parent="Obstacle" unique_id=1267672717 instance=ExtResource("11_kvpfn")]
+position = Vector2(-8156, 8037)
+
+[node name="RandomObstacle50" parent="Obstacle" unique_id=65218993 instance=ExtResource("11_kvpfn")]
+position = Vector2(-7317, 5393)
+
+[node name="RandomObstacle51" parent="Obstacle" unique_id=1649424487 instance=ExtResource("11_kvpfn")]
+position = Vector2(-5924, 3191)
+
+[node name="RandomObstacle52" parent="Obstacle" unique_id=822741552 instance=ExtResource("11_kvpfn")]
+position = Vector2(-4201, 2217)
+
+[node name="RandomObstacle53" parent="Obstacle" unique_id=700219607 instance=ExtResource("11_kvpfn")]
+position = Vector2(-2568, 1206)
+
+[node name="RandomObstacle54" parent="Obstacle" unique_id=1280816505 instance=ExtResource("11_kvpfn")]
+position = Vector2(-350, 794)
 
 [connection signal="timeout" from="GameManager/StopGame" to="GameManager" method="_on_stop_game_timeout"]

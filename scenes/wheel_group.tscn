@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0voarbyxoh3t"]
 
 [ext_resource type="Script" uid="uid://eqxj6c86qgcg" path="res://scripts/wheel_group.gd" id="1_k0jt3"]
-[ext_resource type="PackedScene" uid="uid://cwfsxh15hkkt6" path="res://scenes/obstacle.tscn" id="1_m37ds"]
+[ext_resource type="PackedScene" uid="uid://cwfsxh15hkkt6" path="res://scenes/obstacle_wheel.tscn" id="1_m37ds"]
 
 [node name="WheelGroup" type="Node2D" unique_id=1920061961]
 script = ExtResource("1_k0jt3")
