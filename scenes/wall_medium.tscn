@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dtroadmbupf2c"]
+
+[ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="1_gygsv"]
+
+[node name="WallMedium" type="Node2D" unique_id=1708914041]
+
+[node name="Wall" parent="." unique_id=306052144 instance=ExtResource("1_gygsv")]
+position = Vector2(-384, 0)
+
+[node name="Wall2" parent="." unique_id=298529423 instance=ExtResource("1_gygsv")]
+
+[node name="Wall3" parent="." unique_id=743244383 instance=ExtResource("1_gygsv")]
+position = Vector2(384, 0)

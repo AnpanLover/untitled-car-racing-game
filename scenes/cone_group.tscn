@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://0sylo2b1ixkw"]
+
+[ext_resource type="PackedScene" uid="uid://d3308x7slojqv" path="res://scenes/obstacle_cone.tscn" id="1_pmd2y"]
+
+[node name="ConeGroup" type="Node2D" unique_id=817836155]
+
+[node name="Obstacle_Cone" parent="." unique_id=1037469282 instance=ExtResource("1_pmd2y")]
+
+[node name="Obstacle_Cone2" parent="." unique_id=1383594258 instance=ExtResource("1_pmd2y")]
+position = Vector2(-48, -48)
+
+[node name="Obstacle_Cone3" parent="." unique_id=20665652 instance=ExtResource("1_pmd2y")]
+position = Vector2(48, 48)
+
+[node name="Obstacle_Cone4" parent="." unique_id=625463563 instance=ExtResource("1_pmd2y")]
+position = Vector2(48, -48)
+
+[node name="Obstacle_Cone5" parent="." unique_id=1314642612 instance=ExtResource("1_pmd2y")]
+position = Vector2(-48, 48)
+
+[node name="Obstacle_Cone6" parent="." unique_id=489199399 instance=ExtResource("1_pmd2y")]
+position = Vector2(-80, 0)
+
+[node name="Obstacle_Cone7" parent="." unique_id=1830297791 instance=ExtResource("1_pmd2y")]
+position = Vector2(0, -80)
+
+[node name="Obstacle_Cone8" parent="." unique_id=1269061459 instance=ExtResource("1_pmd2y")]
+position = Vector2(88, 0)
+
+[node name="Obstacle_Cone9" parent="." unique_id=214589372 instance=ExtResource("1_pmd2y")]
+position = Vector2(0, 80)

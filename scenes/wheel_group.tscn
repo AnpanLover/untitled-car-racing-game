@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b0voarbyxoh3t"]
+
+[ext_resource type="Script" uid="uid://eqxj6c86qgcg" path="res://scripts/wheel_group.gd" id="1_k0jt3"]
+[ext_resource type="PackedScene" uid="uid://cwfsxh15hkkt6" path="res://scenes/obstacle.tscn" id="1_m37ds"]
+
+[node name="WheelGroup" type="Node2D" unique_id=1920061961]
+script = ExtResource("1_k0jt3")
+
+[node name="Obstacle" parent="." unique_id=1037469282 instance=ExtResource("1_m37ds")]
+position = Vector2(-96, -96)
+
+[node name="Obstacle2" parent="." unique_id=1944519411 instance=ExtResource("1_m37ds")]
+position = Vector2(0, -96)
+
+[node name="Obstacle3" parent="." unique_id=1106032191 instance=ExtResource("1_m37ds")]
+position = Vector2(96, -96)
+
+[node name="Obstacle4" parent="." unique_id=1192560279 instance=ExtResource("1_m37ds")]
+position = Vector2(-96, 0)
+
+[node name="Obstacle5" parent="." unique_id=871071461 instance=ExtResource("1_m37ds")]
+
+[node name="Obstacle6" parent="." unique_id=239286700 instance=ExtResource("1_m37ds")]
+position = Vector2(96, 0)
+
+[node name="Obstacle7" parent="." unique_id=607273310 instance=ExtResource("1_m37ds")]
+position = Vector2(-96, 96)
+
+[node name="Obstacle8" parent="." unique_id=2096407118 instance=ExtResource("1_m37ds")]
+position = Vector2(0, 96)
+
+[node name="Obstacle9" parent="." unique_id=598688107 instance=ExtResource("1_m37ds")]
+position = Vector2(96, 96)

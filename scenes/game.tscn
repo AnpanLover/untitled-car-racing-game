@@ -7,7 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://dxl6tpqiap2l8" path="res://scenes/win_lose_ui.tscn" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bmviby0cmu2jo" path="res://assets/textures/rectangle.svg" id="5_gee14"]
-[ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://dtroadmbupf2c" path="res://scenes/wall_medium.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://bpbyvbqc0h5v" path="res://scenes/wall_long.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://b0voarbyxoh3t" path="res://scenes/wheel_group.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://0sylo2b1ixkw" path="res://scenes/cone_group.tscn" id="12_dinhu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
 atlas = ExtResource("5_gee14")
@@ -516,7 +520,7 @@ metadata/_edit_lock_ = true
 [node name="Road12" parent="Road" unique_id=1170435786 instance=ExtResource("3_lnu2h")]
 position = Vector2(18963.002, 6995.0005)
 rotation = 3.507645
-scale = Vector2(9.873243, 2)
+scale = Vector2(10.241134, 2)
 metadata/_edit_lock_ = true
 
 [node name="Road2" parent="Road" unique_id=1641992211 instance=ExtResource("3_lnu2h")]
@@ -533,10 +537,435 @@ default_color = Color(0.81, 0.63477, 0.33210003, 1)
 joint_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="Wall" parent="." unique_id=306052144 instance=ExtResource("9_0tnpc")]
-position = Vector2(1456, -408)
+[node name="Wall" type="Node" parent="." unique_id=91436291]
 
-[node name="Wall2" parent="." unique_id=815173394 instance=ExtResource("9_0tnpc")]
-position = Vector2(1841, -409)
+[node name="WallMedium" parent="Wall" unique_id=1708914041 instance=ExtResource("8_gee14")]
+position = Vector2(1736, -416)
+
+[node name="WallLong" parent="Wall" unique_id=311818094 instance=ExtResource("9_0tnpc")]
+position = Vector2(5055.9995, -288)
+rotation = 0.10708782
+
+[node name="WallLong2" parent="Wall" unique_id=1978235173 instance=ExtResource("9_0tnpc")]
+position = Vector2(7864, 56.00006)
+rotation = 0.13242629
+
+[node name="WallLong3" parent="Wall" unique_id=154966792 instance=ExtResource("9_0tnpc")]
+position = Vector2(10552, 424)
+rotation = 0.13843642
+
+[node name="WallLong4" parent="Wall" unique_id=921451919 instance=ExtResource("9_0tnpc")]
+position = Vector2(13160, 808.00006)
+rotation = 0.14667532
+
+[node name="WallLong5" parent="Wall" unique_id=1490201960 instance=ExtResource("9_0tnpc")]
+position = Vector2(15904.001, 1224)
+rotation = 0.14667532
+
+[node name="WallLong6" parent="Wall" unique_id=1554866887 instance=ExtResource("9_0tnpc")]
+position = Vector2(18663.998, 1632)
+rotation = 0.14667532
+
+[node name="Wall" parent="Wall" unique_id=306052144 instance=ExtResource("10_vtaks")]
+position = Vector2(3912, -392)
+
+[node name="Wall2" parent="Wall" unique_id=1833685259 instance=ExtResource("10_vtaks")]
+position = Vector2(3528, -392)
+
+[node name="Wall5" parent="Wall" unique_id=1414955630 instance=ExtResource("10_vtaks")]
+position = Vector2(23064, 2712)
+rotation = 0.669084
+
+[node name="Wall3" parent="Wall" unique_id=858811588 instance=ExtResource("10_vtaks")]
+position = Vector2(22744, 2543.9995)
+rotation = 0.29861295
+
+[node name="Wall4" parent="Wall" unique_id=679037051 instance=ExtResource("10_vtaks")]
+position = Vector2(22376, 2440.0002)
+rotation = 0.23800752
+
+[node name="Wall6" parent="Wall" unique_id=1184803922 instance=ExtResource("10_vtaks")]
+position = Vector2(24264, 3832.0007)
+rotation = 1.4141861
+
+[node name="Wall7" parent="Wall" unique_id=1587751216 instance=ExtResource("10_vtaks")]
+position = Vector2(24096.002, 3536.0012)
+rotation = 0.6831783
+
+[node name="Wall8" parent="Wall" unique_id=244059244 instance=ExtResource("10_vtaks")]
+position = Vector2(23800, 3295.9998)
+rotation = 0.6831783
+
+[node name="Wall9" parent="Wall" unique_id=184469816 instance=ExtResource("10_vtaks")]
+position = Vector2(24416.002, 7064.0005)
+rotation = -1.477664
+
+[node name="Wall10" parent="Wall" unique_id=822143969 instance=ExtResource("10_vtaks")]
+position = Vector2(24272, 7376.0005)
+rotation = -0.7838897
+
+[node name="Wall11" parent="Wall" unique_id=1654571201 instance=ExtResource("10_vtaks")]
+position = Vector2(24000, 7640.0005)
+rotation = -0.7838897
+
+[node name="Wall14" parent="Wall" unique_id=1271464978 instance=ExtResource("10_vtaks")]
+position = Vector2(23752, 5880)
+rotation = 1.7233114
+
+[node name="Wall12" parent="Wall" unique_id=2031555190 instance=ExtResource("10_vtaks")]
+position = Vector2(23776.002, 5504.0005)
+rotation = 1.5707963
+scale = Vector2(2.0000002, 2.0000002)
+
+[node name="Wall13" parent="Wall" unique_id=506657715 instance=ExtResource("10_vtaks")]
+position = Vector2(22488.002, 8456)
+rotation = 0.099103376
+
+[node name="Wall15" parent="Wall" unique_id=325459114 instance=ExtResource("10_vtaks")]
+position = Vector2(22864, 8488)
+rotation = 0.062083244
+
+[node name="WallMedium3" parent="Wall" unique_id=912369348 instance=ExtResource("8_gee14")]
+position = Vector2(19175.998, 7519.9995)
+rotation = 0.36061418
+
+[node name="Wall16" parent="Wall" unique_id=2124065276 instance=ExtResource("10_vtaks")]
+position = Vector2(16304, 5696)
+
+[node name="Wall21" parent="Wall" unique_id=1438008915 instance=ExtResource("10_vtaks")]
+position = Vector2(14687.999, 5639.9995)
+rotation = -0.107410185
+
+[node name="Wall22" parent="Wall" unique_id=1313063217 instance=ExtResource("10_vtaks")]
+position = Vector2(15064, 5624)
+rotation = 0.009143576
+
+[node name="Wall18" parent="Wall" unique_id=618561650 instance=ExtResource("10_vtaks")]
+position = Vector2(17024.002, 5816.0005)
+rotation = 0.3936376
+
+[node name="Wall17" parent="Wall" unique_id=1897288652 instance=ExtResource("10_vtaks")]
+position = Vector2(16679.998, 5720.0005)
+rotation = 0.12623762
+
+[node name="Wall19" parent="Wall" unique_id=340238561 instance=ExtResource("10_vtaks")]
+position = Vector2(21048.002, 8224.001)
+rotation = 0.44038013
+
+[node name="Wall20" parent="Wall" unique_id=1506815583 instance=ExtResource("10_vtaks")]
+position = Vector2(21392.002, 8336)
+rotation = 0.1746827
+
+[node name="Wall23" parent="Wall" unique_id=360462567 instance=ExtResource("10_vtaks")]
+position = Vector2(5464, 4896)
+rotation = 0.28080285
+
+[node name="Wall24" parent="Wall" unique_id=1392443703 instance=ExtResource("10_vtaks")]
+position = Vector2(5104, 4839.9995)
+rotation = 0.011578351
+
+[node name="Wall25" parent="Wall" unique_id=69398944 instance=ExtResource("10_vtaks")]
+position = Vector2(4719.9995, 4831.9995)
+rotation = 0.011578351
+
+[node name="WallMedium2" parent="Wall" unique_id=1714384052 instance=ExtResource("8_gee14")]
+position = Vector2(10712, 7080)
+rotation = 0.009126628
+
+[node name="WallMedium4" parent="Wall" unique_id=752361365 instance=ExtResource("8_gee14")]
+position = Vector2(7703.9995, 5576)
+rotation = 0.2969337
+
+[node name="WallLong7" parent="Wall" unique_id=1222166871 instance=ExtResource("9_0tnpc")]
+position = Vector2(2696, 4800)
+rotation = 0.01501739
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Wall26" parent="Wall" unique_id=1264771081 instance=ExtResource("10_vtaks")]
+position = Vector2(504, 4760)
+
+[node name="Wall27" parent="Wall" unique_id=1367795061 instance=ExtResource("10_vtaks")]
+position = Vector2(144.00012, 4824.0005)
+rotation = -0.3455626
+
+[node name="Wall28" parent="Wall" unique_id=1025531586 instance=ExtResource("10_vtaks")]
+position = Vector2(-216.00012, 4952)
+rotation = -0.3455626
+
+[node name="Wall31" parent="Wall" unique_id=2042714514 instance=ExtResource("10_vtaks")]
+position = Vector2(-2384, 6663.9995)
+rotation = -0.89075804
+
+[node name="Wall32" parent="Wall" unique_id=1683407991 instance=ExtResource("10_vtaks")]
+position = Vector2(-2504, 6984.0005)
+rotation = -1.578985
+
+[node name="Wall33" parent="Wall" unique_id=393469469 instance=ExtResource("10_vtaks")]
+position = Vector2(-2504, 7368.0005)
+rotation = -1.578985
+
+[node name="Wall34" parent="Wall" unique_id=1390388068 instance=ExtResource("10_vtaks")]
+position = Vector2(-1888.0001, 9016)
+rotation = -2.0715754
+
+[node name="Wall35" parent="Wall" unique_id=947523968 instance=ExtResource("10_vtaks")]
+position = Vector2(-1648.0001, 9264)
+rotation = -2.59476
+
+[node name="WallLong8" parent="Wall" unique_id=1167106799 instance=ExtResource("9_0tnpc")]
+position = Vector2(400.00024, 10096)
+rotation = 0.22139415
+
+[node name="WallLong10" parent="Wall" unique_id=1727509008 instance=ExtResource("9_0tnpc")]
+position = Vector2(3976, 10912.001)
+rotation = 0.22139832
+
+[node name="WallLong11" parent="Wall" unique_id=1642749205 instance=ExtResource("9_0tnpc")]
+position = Vector2(2168, 14160)
+rotation = -0.0469708
+
+[node name="WallLong12" parent="Wall" unique_id=1636541863 instance=ExtResource("9_0tnpc")]
+position = Vector2(-488, 14279.999)
+rotation = -0.0469708
+
+[node name="Wall29" parent="Wall" unique_id=1663748682 instance=ExtResource("10_vtaks")]
+position = Vector2(7039.999, 10856)
+rotation = 0.3774159
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="Wall30" parent="Wall" unique_id=1814468243 instance=ExtResource("10_vtaks")]
+position = Vector2(7183.9995, 11088)
+rotation = 1.967179
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="Wall36" parent="Wall" unique_id=276910612 instance=ExtResource("10_vtaks")]
+position = Vector2(7032.001, 11440)
+rotation = 1.967179
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="Wall37" parent="Wall" unique_id=1984930562 instance=ExtResource("10_vtaks")]
+position = Vector2(6080, 12808.001)
+rotation = 2.4285893
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="Wall38" parent="Wall" unique_id=1730609028 instance=ExtResource("10_vtaks")]
+position = Vector2(5792, 13056.001)
+rotation = 2.4285893
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="Wall39" parent="Wall" unique_id=1313089727 instance=ExtResource("10_vtaks")]
+position = Vector2(4408.0005, 13928)
+rotation = 2.619438
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="Wall40" parent="Wall" unique_id=1484406604 instance=ExtResource("10_vtaks")]
+position = Vector2(4064, 14039.999)
+rotation = 3.0644305
+scale = Vector2(1.9999999, 1.9999999)
+
+[node name="WallMedium5" parent="Wall" unique_id=571755266 instance=ExtResource("8_gee14")]
+position = Vector2(-2664, 13984)
+rotation = -0.82832086
+
+[node name="WallMedium6" parent="Wall" unique_id=1878169523 instance=ExtResource("8_gee14")]
+position = Vector2(-3304, 15399.999)
+rotation = -1.5165136
+
+[node name="WallMedium7" parent="Wall" unique_id=943622570 instance=ExtResource("8_gee14")]
+position = Vector2(-2823.998, 16928)
+rotation = -2.1913846
+
+[node name="WallMedium8" parent="Wall" unique_id=1221056488 instance=ExtResource("8_gee14")]
+position = Vector2(-600, 17872)
+rotation = 0.09630141
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium9" parent="Wall" unique_id=981952194 instance=ExtResource("8_gee14")]
+position = Vector2(1528, 18056)
+rotation = 0.07848149
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium10" parent="Wall" unique_id=1601407725 instance=ExtResource("8_gee14")]
+position = Vector2(4168, 18175.998)
+rotation = -0.027703837
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium11" parent="Wall" unique_id=1173586446 instance=ExtResource("8_gee14")]
+position = Vector2(7471.999, 17776.002)
+rotation = -0.52780485
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium12" parent="Wall" unique_id=1318451198 instance=ExtResource("8_gee14")]
+position = Vector2(8199.999, 16383.998)
+rotation = -0.52780485
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium13" parent="Wall" unique_id=1762798547 instance=ExtResource("8_gee14")]
+position = Vector2(11096.001, 14360.001)
+rotation = -0.5783215
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium14" parent="Wall" unique_id=150756502 instance=ExtResource("8_gee14")]
+position = Vector2(13127.999, 13264)
+rotation = -0.2415146
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium15" parent="Wall" unique_id=1223399096 instance=ExtResource("8_gee14")]
+position = Vector2(15424, 12807.999)
+rotation = -0.033703104
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium16" parent="Wall" unique_id=779640180 instance=ExtResource("8_gee14")]
+position = Vector2(16575.998, 12767.998)
+rotation = -0.033703104
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium17" parent="Wall" unique_id=1370415114 instance=ExtResource("8_gee14")]
+position = Vector2(20031.998, 13623.998)
+rotation = 0.5449413
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium18" parent="Wall" unique_id=65040130 instance=ExtResource("8_gee14")]
+position = Vector2(21880, 15072)
+rotation = 0.9875054
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium19" parent="Wall" unique_id=948631398 instance=ExtResource("8_gee14")]
+position = Vector2(22984, 17128.002)
+rotation = 1.3776455
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium20" parent="Wall" unique_id=2041386430 instance=ExtResource("8_gee14")]
+position = Vector2(23167.998, 19456)
+rotation = 1.8581072
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium21" parent="Wall" unique_id=1552252698 instance=ExtResource("8_gee14")]
+position = Vector2(21856, 22815.998)
+rotation = 2.0262978
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="WallMedium22" parent="Wall" unique_id=1353722933 instance=ExtResource("8_gee14")]
+position = Vector2(20392.002, 24615.996)
+rotation = 2.3414197
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Wall41" parent="Wall" unique_id=2088279157 instance=ExtResource("10_vtaks")]
+position = Vector2(6800, 18079.998)
+rotation = -0.07035746
+
+[node name="Wall42" parent="Wall" unique_id=533813396 instance=ExtResource("10_vtaks")]
+position = Vector2(23304, 18728)
+rotation = 1.4141734
+
+[node name="Wall43" parent="Wall" unique_id=296269837 instance=ExtResource("10_vtaks")]
+position = Vector2(19824, 25095.998)
+rotation = 2.7491078
+
+[node name="Wall44" parent="Wall" unique_id=1448323982 instance=ExtResource("10_vtaks")]
+position = Vector2(18560, 25471.996)
+rotation = 3.0160315
+
+[node name="Wall45" parent="Wall" unique_id=1199244891 instance=ExtResource("10_vtaks")]
+position = Vector2(18184, 25512.002)
+rotation = 3.0576844
+
+[node name="WallLong9" parent="Wall" unique_id=484535936 instance=ExtResource("9_0tnpc")]
+position = Vector2(16072, 25335.998)
+rotation = 0.10297498
+
+[node name="WallLong13" parent="Wall" unique_id=1673721508 instance=ExtResource("9_0tnpc")]
+position = Vector2(13456, 25064)
+rotation = 0.10297498
+
+[node name="WallLong14" parent="Wall" unique_id=824153586 instance=ExtResource("9_0tnpc")]
+position = Vector2(10504, 24800)
+rotation = 0.037474334
+
+[node name="WallLong15" parent="Wall" unique_id=280541204 instance=ExtResource("9_0tnpc")]
+position = Vector2(7184, 24664.002)
+rotation = 0.037474334
+
+[node name="WallLong16" parent="Wall" unique_id=1217756788 instance=ExtResource("9_0tnpc")]
+position = Vector2(3711.9995, 24447.998)
+rotation = 0.117943816
+
+[node name="WallLong17" parent="Wall" unique_id=978156487 instance=ExtResource("9_0tnpc")]
+position = Vector2(416.00018, 24071.998)
+rotation = 0.117943816
+
+[node name="WallMedium23" parent="Wall" unique_id=695521777 instance=ExtResource("8_gee14")]
+position = Vector2(-2519.9993, 23607.998)
+rotation = 0.3306831
+
+[node name="WallMedium24" parent="Wall" unique_id=1363537600 instance=ExtResource("8_gee14")]
+position = Vector2(-5224, 22616)
+rotation = 0.42951575
+
+[node name="WallMedium25" parent="Wall" unique_id=758993775 instance=ExtResource("8_gee14")]
+position = Vector2(-7824, 21288)
+rotation = 0.61634713
+
+[node name="WallMedium26" parent="Wall" unique_id=1385981546 instance=ExtResource("8_gee14")]
+position = Vector2(-9312.001, 20224.002)
+rotation = 0.6265734
+
+[node name="Wall46" parent="Wall" unique_id=131283016 instance=ExtResource("10_vtaks")]
+position = Vector2(-9856, 19728)
+rotation = 1.1060748
+
+[node name="Wall47" parent="Wall" unique_id=2075553970 instance=ExtResource("10_vtaks")]
+position = Vector2(-10312, 18624.002)
+rotation = 1.4838008
+
+[node name="Wall48" parent="Wall" unique_id=1655275882 instance=ExtResource("10_vtaks")]
+position = Vector2(-10216, 18976)
+rotation = 1.125016
+
+[node name="Wall49" parent="Wall" unique_id=2138285112 instance=ExtResource("10_vtaks")]
+position = Vector2(-10320, 17432)
+rotation = 1.9112782
+
+[node name="Wall50" parent="Wall" unique_id=727135713 instance=ExtResource("10_vtaks")]
+position = Vector2(-10191.999, 17072)
+rotation = 1.9112782
+
+[node name="Wall51" parent="Wall" unique_id=1444472678 instance=ExtResource("10_vtaks")]
+position = Vector2(-8296, 14783.999)
+rotation = 1.994388
+
+[node name="Wall52" parent="Wall" unique_id=1343786301 instance=ExtResource("10_vtaks")]
+position = Vector2(-8208, 14432)
+rotation = 1.6394947
+
+[node name="WallMedium27" parent="Wall" unique_id=1859445816 instance=ExtResource("8_gee14")]
+position = Vector2(-8159.9995, 11576)
+rotation = 1.4610997
+
+[node name="WallMedium28" parent="Wall" unique_id=2111282020 instance=ExtResource("8_gee14")]
+position = Vector2(-9200.001, 9544.001)
+rotation = 1.4762156
+
+[node name="WallMedium29" parent="Wall" unique_id=1864247187 instance=ExtResource("8_gee14")]
+position = Vector2(-8624, 6896)
+rotation = 2.1305044
+
+[node name="WallMedium30" parent="Wall" unique_id=969979554 instance=ExtResource("8_gee14")]
+position = Vector2(-4359.9995, 1184)
+rotation = 2.7269773
+
+[node name="WallMedium31" parent="Wall" unique_id=1293771046 instance=ExtResource("8_gee14")]
+position = Vector2(-1672.0001, 104)
+rotation = 2.88069
+
+[node name="WallLong18" parent="Wall" unique_id=406101674 instance=ExtResource("9_0tnpc")]
+position = Vector2(-6847.9995, 4184)
+rotation = -0.94912624
+
+[node name="WheelGroup" parent="." unique_id=1920061961 instance=ExtResource("11_kvpfn")]
+position = Vector2(1352, 216)
+
+[node name="ConeGroup" parent="." unique_id=817836155 instance=ExtResource("12_dinhu")]
+position = Vector2(1664, 512)
 
 [connection signal="timeout" from="GameManager/StopGame" to="GameManager" method="_on_stop_game_timeout"]
