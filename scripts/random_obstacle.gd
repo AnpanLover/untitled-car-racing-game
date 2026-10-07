@@ -1,8 +1,6 @@
 extends Marker2D
 
 var every_obstacle = [
-	preload("uid://cwfsxh15hkkt6"),
-	preload("uid://d3308x7slojqv"),
 	preload("uid://b0voarbyxoh3t"),
 	preload("uid://0sylo2b1ixkw")
 ]

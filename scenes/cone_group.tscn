@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://0sylo2b1ixkw"]
 
 [ext_resource type="PackedScene" uid="uid://d3308x7slojqv" path="res://scenes/obstacle_cone.tscn" id="1_pmd2y"]
+[ext_resource type="Script" uid="uid://ei2eaqgssbwp" path="res://scripts/cone_group.gd" id="1_xjoxd"]
 
 [node name="ConeGroup" type="Node2D" unique_id=817836155]
+script = ExtResource("1_xjoxd")
 
 [node name="Obstacle_Cone" parent="." unique_id=1037469282 instance=ExtResource("1_pmd2y")]
 
