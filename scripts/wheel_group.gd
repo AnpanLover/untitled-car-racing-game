@@ -7,7 +7,7 @@ func _on_timer_timeout() -> void:
 
 func randomness():
 	var childs = get_children()
-	var random = RandomNumberGenerator.new().randi_range(0, 3)
+	var random = RandomNumberGenerator.new().randi_range(0, 2)
 
 	for child in childs:
 		if child is RigidBody2D:

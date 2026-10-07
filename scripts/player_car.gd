@@ -10,7 +10,7 @@ var is_on_road = false
 
 @onready var area_detect: Area2D = $Area2D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Detect if on road or not
 	var overlapping = area_detect.get_overlapping_areas()
 	is_on_road = true if overlapping else false

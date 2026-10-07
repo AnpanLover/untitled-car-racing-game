@@ -4,9 +4,11 @@
 [ext_resource type="Script" uid="uid://d0ivgrqxpdlyx" path="res://scripts/game_manager.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cs4oond48riyv" path="res://scenes/road.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bunpici8048e8" path="res://scenes/goal.tscn" id="3_p57ef"]
+[ext_resource type="FontFile" uid="uid://dnfa4jjoe67ud" path="res://assets/fonts/Roboto-VariableFont_wdth,wght.ttf" id="4_dinhu"]
 [ext_resource type="PackedScene" uid="uid://dxl6tpqiap2l8" path="res://scenes/win_lose_ui.tscn" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bmviby0cmu2jo" path="res://assets/textures/rectangle.svg" id="5_gee14"]
+[ext_resource type="FontFile" uid="uid://bjlo0bqpcr3oa" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="5_kvuet"]
 [ext_resource type="PackedScene" uid="uid://dtroadmbupf2c" path="res://scenes/wall_medium.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://bpbyvbqc0h5v" path="res://scenes/wall_long.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="10_vtaks"]
@@ -28,6 +30,84 @@ metadata/_snap_count = 7
 [node name="GameManager" type="Node" parent="." unique_id=1904859772]
 unique_name_in_owner = true
 script = ExtResource("2_u5sy4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=1398748121]
+
+[node name="Confetti" type="CPUParticles2D" parent="GameManager/CanvasLayer" unique_id=982388233]
+position = Vector2(960, 1200)
+scale = Vector2(2, 2)
+emitting = false
+amount = 40
+texture = SubResource("AtlasTexture_0tnpc")
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -90)
+spread = 25.0
+gravity = Vector2(0, 2000)
+initial_velocity_min = 600.0
+initial_velocity_max = 1200.0
+angular_velocity_min = -1200.0
+angular_velocity_max = 1200.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+color_initial_ramp = SubResource("Gradient_vtaks")
+
+[node name="WinLoseUI" parent="GameManager/CanvasLayer" unique_id=687290800 instance=ExtResource("4_gee14")]
+
+[node name="Stats" type="Control" parent="GameManager/CanvasLayer" unique_id=1321602325]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameManager/CanvasLayer/Stats" unique_id=659986890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameManager/CanvasLayer/Stats/MarginContainer" unique_id=1890878972]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="GameManager/CanvasLayer/Stats/MarginContainer/VBoxContainer" unique_id=1406517030]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.30980393)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("4_dinhu")
+theme_override_font_sizes/font_size = 50
+text = "Checkpoints"
+
+[node name="Separater" type="Control" parent="GameManager/CanvasLayer/Stats/MarginContainer/VBoxContainer" unique_id=225659082]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Score" type="Label" parent="GameManager/CanvasLayer/Stats/MarginContainer/VBoxContainer" unique_id=50052546]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.30980393)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("5_kvuet")
+theme_override_font_sizes/font_size = 105
+text = "0/10"
+
+[node name="Timer" type="Label" parent="GameManager/CanvasLayer/Stats/MarginContainer/VBoxContainer" unique_id=2035293208]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.30980393)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("4_dinhu")
+theme_override_font_sizes/font_size = 50
+text = "00:00.00"
 
 [node name="StopGame" type="Timer" parent="GameManager" unique_id=75946600]
 wait_time = 3.0
@@ -104,32 +184,6 @@ position = Vector2(-7147.0005, 5331.0005)
 rotation = 5.2773957
 scale = Vector2(2.5, 2.5)
 metadata/queue = 9
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1398748121]
-
-[node name="Confetti" type="CPUParticles2D" parent="CanvasLayer" unique_id=982388233]
-position = Vector2(960, 1200)
-scale = Vector2(2, 2)
-emitting = false
-amount = 40
-texture = SubResource("AtlasTexture_0tnpc")
-lifetime = 5.0
-one_shot = true
-explosiveness = 1.0
-direction = Vector2(0, -90)
-spread = 25.0
-gravity = Vector2(0, 2000)
-initial_velocity_min = 600.0
-initial_velocity_max = 1200.0
-angular_velocity_min = -1200.0
-angular_velocity_max = 1200.0
-angle_min = -720.0
-angle_max = 720.0
-scale_amount_min = 0.05
-scale_amount_max = 0.15
-color_initial_ramp = SubResource("Gradient_vtaks")
-
-[node name="WinLoseUI" parent="CanvasLayer" unique_id=687290800 instance=ExtResource("4_gee14")]
 
 [node name="Road" type="Node" parent="." unique_id=1568712061]
 
