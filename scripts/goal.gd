@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var manager: Node = %GameManager
+@onready var sfx: AudioStreamPlayer2D = $VictorySound
 
 func _on_area_entered(area: Area2D) -> void:
 	# check if there no winner yet
@@ -13,4 +14,5 @@ func _on_area_entered(area: Area2D) -> void:
 	var winner_is_presented = false if winner_count == 0 else true
 	if current_lap == lap_count and winner_is_presented == false:
 		manager.car_win(car)
+		sfx.playing = true
 		
