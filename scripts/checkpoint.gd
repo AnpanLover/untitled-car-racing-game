@@ -13,6 +13,7 @@ var stage: int
 
 @onready var areadetect: ColorRect = $Areadetect
 @onready var manager: Node = %GameManager
+@onready var sfx: AudioStreamPlayer2D = $Passed
 
 func _process(delta: float) -> void:
 	time_elapsed += delta
@@ -35,6 +36,7 @@ func _on_area_entered(area: Area2D) -> void:
 		flicker_pop = 0.8 # POP effect
 		manager.lap_passed() # add 1 to current_lap
 		car.set_meta("lap", manager.current_lap) # set metadata "lap" to current lap
+		sfx.playing = true
 	
 func stage_checker():
 	# change color based on metadata "stage"

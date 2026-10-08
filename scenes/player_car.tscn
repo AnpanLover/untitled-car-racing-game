@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bwsusvvtfhu2q" path="res://assets/textures/racing_car.svg" id="2_ir7uv"]
 [ext_resource type="Texture2D" uid="uid://xqb1qo68qg5" path="res://assets/textures/circle.svg" id="3_v64uw"]
 [ext_resource type="PackedScene" uid="uid://c1054fjv7th2l" path="res://scenes/wheel_path_effect.tscn" id="4_s2c5k"]
+[ext_resource type="AudioStream" uid="uid://br72p28wub1f6" path="res://assets/sfxs/blip2.wav" id="5_5hvhq"]
+[ext_resource type="AudioStream" uid="uid://bj3tv8v0vkgpl" path="res://assets/sfxs/bump1.wav" id="6_w3cpc"]
 
 [sub_resource type="Curve" id="Curve_e8h6m"]
 _data = [Vector2(0.13081396, 0.2851711), 0.0, 0.6293136, 0, 0, Vector2(1, 1), 0.5958599, 0.0, 0, 0]
@@ -94,4 +96,18 @@ zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
+[node name="DrivingSound" type="AudioStreamPlayer2D" parent="." unique_id=278482662]
+stream = ExtResource("5_5hvhq")
+volume_db = -10.0
+autoplay = true
+
+[node name="Timer" type="Timer" parent="DrivingSound" unique_id=273455165]
+wait_time = 0.125
+autostart = true
+
+[node name="BumpingSound" type="AudioStreamPlayer2D" parent="." unique_id=1503868934]
+stream = ExtResource("6_w3cpc")
+volume_db = -1.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_road_detect_area_entered"]
+[connection signal="timeout" from="DrivingSound/Timer" to="." method="_on_timer_timeout"]

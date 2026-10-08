@@ -51,8 +51,23 @@ func _physics_process(delta: float) -> void:
 			velocity = velocity.bounce(normal) * 0.8
 			current_rotation -= velocity.angle() * 0.1
 	
+		# play bumping sound
+		var sfx: AudioStreamPlayer2D = $BumpingSound
+		sfx.pitch_scale = randf_range(0.75, 1.25)
+		if sfx.get_playback_position() < 0.02:
+			sfx.playing = true
+
+	
 	rotation = lerp_angle(rotation, current_rotation, 0.2)
 
 func lap_passed(lap_count: int):
 	set_meta("lap", lap_count)
 	
+func _on_timer_timeout() -> void:
+	var sfx: AudioStreamPlayer2D = $DrivingSound
+	sfx.pitch_scale = (velocity.length() / max_speed) * 1.5 + 1.5
+	sfx.pitch_scale += randf_range(-0.1, 0.1)
+	sfx.playing = true
+	var timer: Timer = $DrivingSound/Timer
+	timer.wait_time = 0.2 / (velocity.length() / max_speed) * 0.25
+	timer.start()

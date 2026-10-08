@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cm08efh72lqtg"]
 
 [ext_resource type="Script" uid="uid://f26e8mrk26lr" path="res://scripts/checkpoint.gd" id="1_yyywg"]
+[ext_resource type="AudioStream" uid="uid://c6uq6qnxsokbe" path="res://assets/sfxs/checkpoint.wav" id="2_ywqth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
 
@@ -42,5 +43,8 @@ offset_transform_enabled = true
 offset_transform_position_ratio = Vector2(-0.5, -0.5)
 offset_transform_scale = Vector2(1, 0.25)
 color = Color(0.5776609, 0.6866234, 0.63312316, 0.6862745)
+
+[node name="Passed" type="AudioStreamPlayer2D" parent="." unique_id=73037745]
+stream = ExtResource("2_ywqth")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
