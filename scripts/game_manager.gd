@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 			
 	lap_count = all_checkpoint.size()
 	
+	update_ui()
+	
 	if Input.is_action_just_pressed("Restart") and winner_presented:
 		Engine.time_scale = 1.0
 		get_tree().reload_current_scene()
@@ -24,16 +26,19 @@ func _process(delta: float) -> void:
 			Engine.time_scale = lerp(Engine.time_scale, 0.0, 0.035)
 		else:
 			Engine.time_scale = 0.0
+			
 
 			
 func car_win(car: CharacterBody2D):
 	print("Winner: ", car)
 	car.add_to_group("winner")
-	var ui = $"../CanvasLayer/WinLoseUI"
-	var confetti = $"../CanvasLayer/Confetti"
+	var ui = $CanvasLayer/WinLoseUI
+	var confetti = $CanvasLayer/Confetti
 	var anim = ui.get_node("AnimationPlayer")
 	var text = ui.get_node("MarginContainer/VBoxContainer/TimeUsedLabel")
-	
+	var animation_player: AnimationPlayer = $CanvasLayer/Stats/AnimationPlayer
+
+	animation_player.play("leaving")
 	confetti.emitting = true
 	ui.visible = true
 	text.text = "Time used: " + time_pretty(time_passed)
@@ -44,6 +49,11 @@ func car_win(car: CharacterBody2D):
 			
 func lap_passed():
 	current_lap += 1
+	var animation_player: AnimationPlayer = $CanvasLayer/Stats/AnimationPlayer
+	if current_lap != lap_count:
+		animation_player.play("wink")
+	else:
+		animation_player.play("wink_2")
 
 func time_pretty(time_float):
 	# return this beauty timer format: "00:00.00"
@@ -56,3 +66,10 @@ func time_pretty(time_float):
 func _on_stop_game_timeout() -> void:
 	timer_end = true
 	
+func update_ui():
+	var ui = $CanvasLayer/Stats/MarginContainer/VBoxContainer
+	var timer: Label = ui.get_node("Timer")
+	timer.text = time_pretty(time_passed)
+	
+	var score: Label = ui.get_node("Score")
+	score.text = str(current_lap, "/", lap_count)
