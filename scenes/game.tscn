@@ -297,7 +297,7 @@ one_shot = true
 ignore_time_scale = true
 
 [node name="PlayerCar" parent="." unique_id=1441090914 instance=ExtResource("1_uwrxv")]
-position = Vector2(525, 40.999992)
+position = Vector2(577, 44.999996)
 rotation = 1.4916358
 
 [node name="Goal" parent="." unique_id=1259974385 instance=ExtResource("3_p57ef")]

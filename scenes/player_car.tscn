@@ -98,7 +98,7 @@ position_smoothing_speed = 6.0
 
 [node name="DrivingSound" type="AudioStreamPlayer2D" parent="." unique_id=278482662]
 stream = ExtResource("5_5hvhq")
-volume_db = -10.0
+volume_db = -16.0
 autoplay = true
 
 [node name="Timer" type="Timer" parent="DrivingSound" unique_id=273455165]

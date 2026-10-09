@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cgfck0re5rs0n" path="res://scripts/goal.gd" id="1_jbojv"]
 [ext_resource type="Texture2D" uid="uid://beknuoccvvlmh" path="res://assets/textures/goal.svg" id="2_sx1j4"]
+[ext_resource type="AudioStream" uid="uid://v1gsiopw2i5q" path="res://assets/sfxs/victory5.wav" id="3_aqdrf"]
 [ext_resource type="AudioStream" uid="uid://c6uq6qnxsokbe" path="res://assets/sfxs/checkpoint.wav" id="3_jvyg3"]
-[ext_resource type="AudioStream" uid="uid://cw787rh8kh66b" path="res://assets/sfxs/victory1.wav" id="3_w3gav"]
+[ext_resource type="AudioStream" uid="uid://c0fgkgpg4plet" path="res://assets/sfxs/sub_chord_victory.wav" id="4_aqdrf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxcl1"]
 size = Vector2(40, 304)
@@ -14,11 +15,13 @@ texture_filter = 2
 texture_repeat = 2
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_e8h6m"]
-stream_count = 2
-stream_0/stream = ExtResource("3_w3gav")
-stream_0/volume = 6.0
-stream_1/stream = ExtResource("3_jvyg3")
+stream_count = 3
+stream_0/stream = ExtResource("3_aqdrf")
+stream_0/volume = 2.0
+stream_1/stream = ExtResource("4_aqdrf")
 stream_1/volume = -2.0
+stream_2/stream = ExtResource("3_jvyg3")
+stream_2/volume = -2.0
 
 [node name="Goal" type="Area2D" unique_id=1259974385]
 z_index = -1
@@ -37,5 +40,7 @@ region_rect = Rect2(0, -224, 64, 512)
 
 [node name="VictorySound" type="AudioStreamPlayer2D" parent="." unique_id=322152250]
 stream = SubResource("AudioStreamSynchronized_e8h6m")
+max_distance = 10000.0
+attenuation = 1.4056208e-05
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
