@@ -16,8 +16,10 @@ func _process(_delta: float) -> void:
 	is_on_road = true if overlapping else false
 	
 func _physics_process(delta: float) -> void:
+	var started = true if %GameManager.game_state == 2 else false
 	# Keep moving forward
-	var forward_direction = Vector2.UP.rotated(current_rotation)
+	var forward_direction: Vector2
+	if started: forward_direction = Vector2.UP.rotated(current_rotation)
 		
 	if velocity.length() < max_speed: # cap speed accelerator
 		velocity += forward_direction * speed
@@ -34,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		accel = lerp(accel, rotate_direction, 0.2)
 	# Rotate the car
-	current_rotation += accel * steering_speed * delta
+	if started: current_rotation += accel * steering_speed * delta
 
 	var collision = move_and_collide(velocity * delta)
 	if collision:		

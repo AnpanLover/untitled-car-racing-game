@@ -9,6 +9,12 @@ var time_passed: float
 var timer_end := false
 var game_state = 0
 
+func _ready() -> void:
+	# connect signal with play button
+	var menu: Control = $CanvasLayer/Menu
+	var button = menu.get_node("CenterContainer/MarginContainer/PlayButton")
+	button.button_down.connect(_on_button_down)
+
 func _process(delta: float) -> void:
 	if game_state == 2: time_passed += delta
 	
@@ -76,5 +82,19 @@ func update_ui():
 	score.text = str(current_lap, "/", lap_count)
 
 
-func start_game():
-	game_state = 1
+func _on_button_down():
+	if game_state == 0:
+		game_state = 1
+		var menu: Control = $CanvasLayer/Menu
+		menu.get_node("AnimationPlayer").play("fadeout")
+		menu.get_node("Click").playing = true
+		await get_tree().create_timer(1.5).timeout
+		
+		var countdown_anim: AnimationPlayer = $CanvasLayer/Countdown/AnimationPlayer
+		countdown_anim.play("start")
+		await get_tree().create_timer(3).timeout
+		game_state = 2
+
+		await get_tree().create_timer(1).timeout
+		var stat_anim: AnimationPlayer = $CanvasLayer/Stats/AnimationPlayer
+		stat_anim.play("entering")
