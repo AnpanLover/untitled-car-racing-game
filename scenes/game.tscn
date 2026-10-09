@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bmviby0cmu2jo" path="res://assets/textures/rectangle.svg" id="5_gee14"]
 [ext_resource type="FontFile" uid="uid://bjlo0bqpcr3oa" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="5_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cc3pmf0nvesub" path="res://scenes/menu.tscn" id="6_trtic"]
+[ext_resource type="AudioStream" uid="uid://dljibbifsaywc" path="res://assets/sfxs/count.wav" id="7_ir15t"]
+[ext_resource type="AudioStream" uid="uid://d20coi4ancue6" path="res://assets/sfxs/count_end.wav" id="8_ca42v"]
 [ext_resource type="PackedScene" uid="uid://dtroadmbupf2c" path="res://scenes/wall_medium.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://bpbyvbqc0h5v" path="res://scenes/wall_long.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="10_vtaks"]
@@ -220,6 +222,119 @@ _data = {
 &"wink_2": SubResource("Animation_ca42v")
 }
 
+[sub_resource type="Animation" id="Animation_264po"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/Label:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1kice"]
+resource_name = "start"
+length = 4.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["3", "2", "1", "GO!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/Label:offset_transform_scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.9, 1, 1.2, 1.9, 1.9999999, 2.2000003, 2.9, 3, 3.2000003, 3.4, 3.8, 4),
+"transitions": PackedFloat32Array(1, 1, 1e-05, 1, 1, 1e-05, 1, 1, 1e-05, 1, 1, 1, 2.1579144e-05, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CountSound")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_ir15t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_ir15t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_ir15t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_ca42v")
+}],
+"times": PackedFloat32Array(0, 1, 2, 3)
+}
+tracks/2/use_blend = false
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/Label:theme_override_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 1), Color(0.24313726, 0.87058824, 0.17254902, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5newe"]
+_data = {
+&"RESET": SubResource("Animation_264po"),
+&"start": SubResource("Animation_1kice")
+}
+
 [node name="Main" type="Node2D" unique_id=2090959149]
 
 [node name="GameManager" type="Node" parent="." unique_id=1904859772]
@@ -309,7 +424,42 @@ theme_override_fonts/font = ExtResource("4_dinhu")
 theme_override_font_sizes/font_size = 50
 text = "00:00.00"
 
+[node name="Countdown" type="Control" parent="GameManager/CanvasLayer" unique_id=1979839028]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="GameManager/CanvasLayer/Countdown" unique_id=314331075]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Countdown/CenterContainer" unique_id=832530696]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("5_kvuet")
+theme_override_font_sizes/font_size = 260
+text = "3"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GameManager/CanvasLayer/Countdown" unique_id=166371871]
+libraries/ = SubResource("AnimationLibrary_5newe")
+
+[node name="CountSound" type="AudioStreamPlayer2D" parent="GameManager/CanvasLayer/Countdown" unique_id=998623552]
+volume_db = 4.0
+max_distance = 100000.0
+
 [node name="Menu" parent="GameManager/CanvasLayer" unique_id=2112153908 instance=ExtResource("6_trtic")]
+z_index = 1
 
 [node name="StopGame" type="Timer" parent="GameManager" unique_id=75946600]
 wait_time = 4.0

@@ -71,3 +71,4 @@ func _on_timer_timeout() -> void:
 	var timer: Timer = $DrivingSound/Timer
 	timer.wait_time = clamp(0.2 / (velocity.length() / max_speed) * 0.25, 0.001, 0.1)
 	timer.start()
+	

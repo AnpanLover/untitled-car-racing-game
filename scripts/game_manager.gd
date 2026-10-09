@@ -7,9 +7,10 @@ var time_passed: float
 @onready var goal: Area2D = %Goal
 @onready var stop_game: Timer = $StopGame
 var timer_end := false
+var game_state = 0
 
 func _process(delta: float) -> void:
-	time_passed += delta
+	if game_state == 2: time_passed += delta
 	
 	var all_checkpoint = get_tree().get_nodes_in_group("checkpoint")
 			
@@ -73,3 +74,7 @@ func update_ui():
 	
 	var score: Label = ui.get_node("Score")
 	score.text = str(current_lap, "/", lap_count)
+
+
+func start_game():
+	game_state = 1
