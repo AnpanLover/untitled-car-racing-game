@@ -69,5 +69,5 @@ func _on_timer_timeout() -> void:
 	sfx.pitch_scale += randf_range(-0.1, 0.1)
 	sfx.playing = true
 	var timer: Timer = $DrivingSound/Timer
-	timer.wait_time = 0.2 / (velocity.length() / max_speed) * 0.25
+	timer.wait_time = clamp(0.2 / (velocity.length() / max_speed) * 0.25, 0.001, 0.1)
 	timer.start()

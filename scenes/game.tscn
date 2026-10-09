@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cm08efh72lqtg" path="res://scenes/checkpoint.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://bmviby0cmu2jo" path="res://assets/textures/rectangle.svg" id="5_gee14"]
 [ext_resource type="FontFile" uid="uid://bjlo0bqpcr3oa" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="5_kvuet"]
+[ext_resource type="PackedScene" uid="uid://cc3pmf0nvesub" path="res://scenes/menu.tscn" id="6_trtic"]
 [ext_resource type="PackedScene" uid="uid://dtroadmbupf2c" path="res://scenes/wall_medium.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://bpbyvbqc0h5v" path="res://scenes/wall_long.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cywlaypruxybm" path="res://scenes/wall.tscn" id="10_vtaks"]
@@ -73,7 +74,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [45]
+"values": [-600]
 }
 
 [sub_resource type="Animation" id="Animation_ir15t"]
@@ -104,6 +105,22 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [105, 107, 105]
+}
+
+[sub_resource type="Animation" id="Animation_ssvqc"]
+resource_name = "entering"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:theme_override_constants/margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-600, 45, 45]
 }
 
 [sub_resource type="Animation" id="Animation_rysoc"]
@@ -197,6 +214,7 @@ tracks/2/keys = {
 _data = {
 &"RESET": SubResource("Animation_kvuet"),
 &"all_checkpoint_pass": SubResource("Animation_ir15t"),
+&"entering": SubResource("Animation_ssvqc"),
 &"leaving": SubResource("Animation_rysoc"),
 &"wink": SubResource("Animation_trtic"),
 &"wink_2": SubResource("Animation_ca42v")
@@ -253,7 +271,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 45
+theme_override_constants/margin_left = -600
 theme_override_constants/margin_top = 35
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameManager/CanvasLayer/Stats/MarginContainer" unique_id=1890878972]
@@ -290,6 +308,8 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_fonts/font = ExtResource("4_dinhu")
 theme_override_font_sizes/font_size = 50
 text = "00:00.00"
+
+[node name="Menu" parent="GameManager/CanvasLayer" unique_id=2112153908 instance=ExtResource("6_trtic")]
 
 [node name="StopGame" type="Timer" parent="GameManager" unique_id=75946600]
 wait_time = 4.0
@@ -759,7 +779,7 @@ metadata/_edit_lock_ = true
 
 [node name="RoadLine" type="Line2D" parent="." unique_id=973752923]
 z_index = -2
-points = PackedVector2Array(159, 77, 1089, 2, 3929, 16, 6060, 250, 9786, 738, 20017, 2239, 22525, 2859, 23855, 3826, 24162, 5483, 23983, 7064, 22811, 8057, 21255, 7900, 16607, 6095, 15025, 6004, 11259, 6672, 9776, 6697, 5227, 5279, 538, 5172, -987, 5650, -2110, 6814, -2122, 7619, -1576, 8789, -422, 9516, 6749, 11125, 6327, 11981, 5291, 12994, 4160, 13613, -2060, 13979, -2791, 14739, -2909, 15915, -2223, 17024, -1131, 17401, 3276, 17812, 6974, 17620, 9822, 15831, 10807, 15065, 12704, 13793, 14865, 13281, 17116, 13135, 19255, 13720, 21259, 14827, 22410, 16638, 22910, 18915, 22240, 20997, 21242, 23115, 19789, 24645, 18955, 25050, 18019, 25080, 11398, 24451, 4736, 24159, -1802, 23390, -4543, 22473, -7126, 21263, -9423, 19687, -9867, 18764, -9963, 17705, -9620, 16709, -8640, 14509, -8545, 12229, -8798, 9083, -8539, 7557, -7065, 5160, -4644, 1839, -2607, 882, -1982, 618)
+points = PackedVector2Array(159, 77, 1089, 2, 3929, 16, 6060, 250, 9786, 738, 20017, 2239, 22525, 2859, 23855, 3826, 24162, 5483, 23983, 7064, 22811, 8057, 21255, 7900, 16607, 6095, 15025, 6004, 11259, 6672, 9776, 6697, 5227, 5279, 538, 5172, -987, 5650, -2037, 6839, -2122, 7619, -1576, 8789, -422, 9516, 6749, 11125, 6327, 11981, 5291, 12994, 4160, 13613, -2060, 13979, -2791, 14739, -2909, 15915, -2223, 17024, -1131, 17401, 3276, 17812, 6974, 17620, 9822, 15831, 10807, 15065, 12704, 13793, 14865, 13281, 17116, 13135, 19255, 13720, 21259, 14827, 22410, 16638, 22910, 18915, 22240, 20997, 21242, 23115, 19789, 24645, 18955, 25050, 18019, 25080, 11398, 24451, 4736, 24159, -1802, 23390, -4543, 22473, -7126, 21263, -9423, 19687, -9867, 18764, -9963, 17705, -9620, 16709, -8640, 14509, -8545, 12229, -8798, 9083, -8539, 7557, -7065, 5160, -4644, 1839, -2607, 882, -1982, 618)
 closed = true
 width = 15.0
 default_color = Color(0.81, 0.63477, 0.33210003, 1)
